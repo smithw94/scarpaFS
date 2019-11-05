@@ -18,20 +18,23 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
 
       <div className="nav-right">
-        <Link to="/login">MY ACCOUNT </Link>
+        {
+          currentUser ? <Link to="/" onClick={logout}>Log Out</Link> : 
+          <Link to="/login">MY ACCOUNT </Link> 
+        }
         <Link to="/cart"> CART ()</Link>
         <Link to="/"><img src={ window.magni } className="search-icon"/></Link>
       </div>
     </nav>
   );
-  const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-  );
+  // const personalGreeting = () => (
+  //   <hgroup className="header-group">
+  //     <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
+  //     <button className="header-button" onClick={logout}>Log Out</button>
+  //   </hgroup>
+  // );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return sessionLinks();
 };
 
 
