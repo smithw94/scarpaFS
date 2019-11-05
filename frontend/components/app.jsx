@@ -6,6 +6,7 @@ import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container';
 import ProductIndexContainer from './products/product_index_container';
 import HomeContainer from './home/home_container';
+import ProductShowContainer from './products/product_show_container';
 
 
 
@@ -21,7 +22,8 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <Route exact path="/products" component={ProductIndexContainer} />
-      <Route path="/" component={HomeContainer} />
+      <Route path ="/products/:id" component={ProductShowContainer} />
+      <Route exact path="/" component={HomeContainer} />
     </Switch>
   </div>
 );

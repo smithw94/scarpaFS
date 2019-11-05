@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductIndexItem = (props) => (
   <li>
-    {props.product.name}
+    <Link to={`products/${props.product.id}`}>{props.product.name}</Link>
   </li>
 );
 
