@@ -227,3 +227,8 @@ input {
   border-left: grey solid 1px;
   padding: 40px;
 }
+
+.backgroundImg {
+  width: 50%;
+  height: auto;
+}

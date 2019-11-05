@@ -27,12 +27,6 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
     </nav>
   );
-  // const personalGreeting = () => (
-  //   <hgroup className="header-group">
-  //     <h2 className="header-name">Hi, {currentUser.first_name}!</h2>
-  //     <button className="header-button" onClick={logout}>Log Out</button>
-  //   </hgroup>
-  // );
 
   return sessionLinks();
 };

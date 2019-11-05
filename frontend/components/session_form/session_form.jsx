@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
             Creating an account has many benefits: check out faster, keep more
             than one address, track orders and more.
           </p>
-          <Link to={this.props.navLink}>Create an Account</Link>
+          <Link to="/signup">Create an Account</Link>
         </div>
       </div>
     );
