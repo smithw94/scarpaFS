@@ -232,3 +232,34 @@ input {
   width: 50%;
   height: auto;
 }
+
+/*  */
+/*  */
+
+.product-nav {
+  padding: 10px 75px;
+  background-color: rgb(31, 29, 29);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 40%;
+  height: 50px;
+}
+
+.product-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 21px;
+
+  padding: 0 15px;
+}
+
+
