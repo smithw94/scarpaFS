@@ -10,4 +10,7 @@
 #
 
 class Attribute < ApplicationRecord
+  validates :attribute_name, :attribute_value, oresence: true
+
+  has_many :product_attributes
 end

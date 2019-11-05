@@ -11,4 +11,7 @@
 #
 
 class Product < ApplicationRecord
+  validates :name, :price, :description, presence: true
+
+  has_many :product_attributes
 end

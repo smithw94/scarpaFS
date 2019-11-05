@@ -10,4 +10,8 @@
 #
 
 class ProductAttribute < ApplicationRecord
+  validates :product_id, :attribute_id, presence: true
+
+  belongs_to :product
+  belongs_to :attribute
 end
