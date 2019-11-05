@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -38,17 +39,19 @@ class SessionForm extends React.Component {
     
     return (
       <div className="login-form-container">
-        
-         {this.props.navLink}
+
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
           <h3>REGISTERED CUSTOMERS</h3>
-          <p>If you have an account, sign in with your email address</p>
+          <br/>
+          <p>If you have an account, sign in with your email address.</p>
+          <br/>
           {this.renderErrors()}
 
           <div className="login-form">
             <br />
             <label>Email:
+              <br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
@@ -57,6 +60,7 @@ class SessionForm extends React.Component {
             </label>
             <br />
             <label>Password:
+              <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -64,9 +68,18 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <button className="session-submit" type="submit"> Sign In</button>
           </div>
         </form>
+
+        <div className="new-customer-box">
+          <h3>New Customers</h3>
+          <p>
+            Creating an account has many benefits: check out faster, keep more
+            than one address, track orders and more.
+          </p>
+          <Link to={this.props.navLink}>Create an Account</Link>
+        </div>
       </div>
     );
   }

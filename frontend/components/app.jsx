@@ -8,12 +8,11 @@ import SignupFormContainer from './session_form/signup_form_container';
 const App = () => (
   <div>
     <header id="header">
-      <h1>Scarpa Proj</h1>
+      <Route path="/" component={GreetingContainer} />
     </header>
 
     <Route path="/login" component={LoginFormContainer} />
     <Route path="/signup" component={SignupFormContainer} />
-    <Route path="/" component={GreetingContainer} />
   </div>
 );
 
