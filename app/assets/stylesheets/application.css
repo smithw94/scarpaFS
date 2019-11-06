@@ -166,21 +166,21 @@ input {
   justify-content: space-around;
   
   border-bottom: black solid 1px;
-  border-top: black solid 1px;
+  border-top: black solid 12px;
 
-  margin-top: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .nav-left {
   display: inline;
+  padding-left: 25px;
 }
 
 .nav-center {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 400px;
 }
 
@@ -195,19 +195,25 @@ input {
   position: relative;
   color: #000;
   text-decoration: none;
-  font: bolder;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 650;
+  padding-right: 20px;
 }
 
 .nav-center a:hover {
-  color: #000;
-  border-bottom: blue 3px solid;
-  transition: 0.3s ease-in-out;
+  text-decoration: underline rgb(62, 62, 190) 3px;
+  
 }
 
 .nav-right a {
   color: #000;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 9px;
+}
+
+.nav-right:last-child {
+  padding-right: 30px;
 }
 
 

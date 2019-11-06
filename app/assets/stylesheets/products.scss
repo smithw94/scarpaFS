@@ -4,20 +4,35 @@
 
 
 .homePage {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  // -webkit-transform: translateZ(0);
+  margin: 0;
   width: 100%;
-  height: auto;
+  box-sizing: border-box;
 }
 
 .homePage1 {
-  position: relative;
-  min-height: fit-content;
-  height: 450px;
-  width: 100%;
-  background: url('home_page_1.jpg');
+  // position: relative;
+  // min-height: fit-content;
+  // height: 100%
+  // width: 100%;
+  background-image: url('home_page_1.png');
 
   background-size: cover;
- 
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  // -webkit-transform: translateZ(0);
+  margin: 0;
 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .homePage1b {

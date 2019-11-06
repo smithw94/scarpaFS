@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const Home = () => (
   <div className="homePage">
     <div className="homePage1">
