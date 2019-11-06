@@ -38,5 +38,9 @@
   "bugs": {
     "url": "https://github.com/smithw94/scarpa/issues"
   },
-  "homepage": "https://github.com/smithw94/scarpa#readme"
+  "homepage": "https://github.com/smithw94/scarpa#readme",
+  "devDependencies": {
+    "file-loader": "^4.2.0",
+    "image-webpack-loader": "^6.0.0"
+  }
 }
