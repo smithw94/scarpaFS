@@ -12,6 +12,13 @@
 class ProductAttribute < ApplicationRecord
   validates :product_id, :attribute_id, presence: true
 
-  belongs_to :product
-  belongs_to :attribute
+  belongs_to :product,
+    foreign_key: :product_id,
+    class_name: :Product
+
+  belongs_to :m_attribute,
+    foreign_key: :attribute_id,
+    class_name: :Attribute
+
+
 end

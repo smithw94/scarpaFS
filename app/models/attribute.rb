@@ -13,4 +13,8 @@ class Attribute < ApplicationRecord
   validates :attribute_name, :attribute_value, presence: true
 
   has_many :product_attributes
+
+  has_many :products,
+    through: :product_attributes,
+    source: :product
 end
