@@ -4,15 +4,16 @@
 
 
 .homePage {
-  display: inline-block;
-  position: relative;
-  max-width: 100%;
-  vertical-align: middle;
-  overflow: hidden;
-  // -webkit-transform: translateZ(0);
-  margin: 0;
+  // display: inline-block;
+  // position: relative;
+  // max-width: 100%;
+  // vertical-align: middle;
+  // overflow: hidden;
+  // // -webkit-transform: translateZ(0);
+  // margin: 0;
   width: 100%;
-  box-sizing: border-box;
+  // box-sizing: border-box;
+  height: auto;
 }
 
 .homePage1 {
@@ -20,19 +21,36 @@
   // min-height: fit-content;
   // height: 100%
   // width: 100%;
-  background-image: url('home_page_1.png');
+  // background-image: url('home_page_1.png');
+  
+  // background-image: url("home_page_1.png");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // height: inherit;
+   width: 100%;
+   // box-sizing: border-box;
+   height: auto;
 
-  background-size: cover;
-  display: inline-block;
-  position: relative;
-  max-width: 100%;
-  vertical-align: middle;
-  overflow: hidden;
-  // -webkit-transform: translateZ(0);
-  margin: 0;
 
+  // // background-size: cover;
+  // display: inline-block;
+  // position: relative;
+  // max-width: 100%;
+  // vertical-align: middle;
+  // overflow: hidden;
+  // // -webkit-transform: translateZ(0);
+  // margin: 0;
+
+  // width: 100%;
+  // box-sizing: border-box;
+}
+
+.homePhoto1 {
+  z-index: -1;
+  position: absolute;
   width: 100%;
-  box-sizing: border-box;
+  height: auto;
 }
 
 .homePage1b {

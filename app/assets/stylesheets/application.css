@@ -252,7 +252,7 @@ input {
 }
 
 .login-form-box {
-  width: 50%;
+  width: 60%;
   box-sizing: border-box;
   padding-left: 25px;
   padding-right: 25px;
@@ -260,7 +260,7 @@ input {
 
 .login-form-box label {
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
 }
 
@@ -275,7 +275,7 @@ input {
   text-transform: initial;
   letter-spacing: 1px;
   /* margin-bottom: 15px; */
-  line-height: 30px;
+  line-height: 25px;
 }
 
 .dummy label {
@@ -313,7 +313,7 @@ input {
   padding: 16px;
 }
 
-a.forgotPw {
+.login-form-container a {
   font-size: 14px;
   text-transform: capitalize;
 }
@@ -345,6 +345,14 @@ button.session-submit {
 div.new-customer-box {
   border-left: solid 1px rgb(189, 185, 185);
 }
+
+.new-customer-box p {
+  font-size: 13px;
+  margin: 15px 0 15px 0;
+  
+}
+
+
 
 
 
