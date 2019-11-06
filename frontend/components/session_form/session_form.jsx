@@ -41,7 +41,6 @@ class SessionForm extends React.Component {
       <div className="login-form-container">
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <br />
           <h3>REGISTERED CUSTOMERS</h3>
           <br/>
           <p>If you have an account, sign in with your email address.</p>
@@ -50,7 +49,7 @@ class SessionForm extends React.Component {
 
           <div className="login-form">
             <br />
-            <label>Email:
+            <label className="login">Email
               <br/>
               <input type="text"
                 value={this.state.email}
@@ -59,7 +58,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <label>Password:
+            <label className="login">Password
               <br/>
               <input type="password"
                 value={this.state.password}
@@ -68,9 +67,16 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
+            <div className="dummy">
+                <input type="checkbox"></input>
+                <label>Remember Me</label> 
+                <span>What's this?</span>
+            </div>
             <button className="session-submit" type="submit"> Sign In</button>
           </div>
+          <Link className="forgotPw" to="/signup">Forgot Your Password?</Link>
         </form>
+          
 
         <div className="new-customer-box">
           <h3>New Customers</h3>

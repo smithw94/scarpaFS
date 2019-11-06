@@ -156,7 +156,10 @@ body {
 }
 
 input {
-  border: black solid 1px
+  border: black solid 1px;
+  padding: 4px 25px;
+  box-sizing: border-box;
+
 }
 
 .nav {
@@ -165,7 +168,7 @@ input {
   display: flex;
   justify-content: space-around;
   
-  border-bottom: black solid 1px;
+  
   border-top: black solid 12px;
 
   padding-top: 10px;
@@ -199,11 +202,25 @@ input {
   letter-spacing: 4px;
   font-weight: 650;
   padding-right: 20px;
+
+  z-index: 971;
 }
 
-.nav-center a:hover {
-  text-decoration: underline rgb(62, 62, 190) 3px;
-  
+.nav-center > a:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 100%;
+  border-bottom: 3px solid #008CA8;
+  /* -webkit-transition: right 0.3s ease-out; */
+  transition: right 0.3s ease-out;
+}
+
+::selection {
+  background: #008C98;
+  color: #fff;
+  text-shadow: none;
 }
 
 .nav-right a {
@@ -220,18 +237,70 @@ input {
 /*  */
 /*  */
 
+.login-form {
+  box-sizing: border-box;
+}
+
 .login-form-container {
   text-transform: uppercase;
   display: flex;
+  list-style: none;
+  font-family: "FuturaPT-Book",
+  Helvetica,
+  sans-serif;
+  padding-top: 50px;
 }
 
 .login-form-box {
-  margin-left: 20px;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.login-form-box label {
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.login-form-container h3 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  line-height: 30px;
+}
+
+.login-form-container p {
+  font-size: 15px;
+  text-transform: initial;
+  letter-spacing: 1px;
+  /* margin-bottom: 15px; */
+  line-height: 30px;
+}
+
+.dummy label {
+  font-size: 13px;
+}
+
+.dummy span {
+  text-transform: initial;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.dummy input {
+  margin-left: 0;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 .new-customer-box {
-  border-left: grey solid 1px;
-  padding: 40px;
+  /* border-left: grey solid 1px;
+  padding: 40px; */
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .backgroundImg {
@@ -239,9 +308,43 @@ input {
   height: auto;
 }
 
+.login-input {
+  width: 50%;
+  padding: 16px;
+}
+
+a.forgotPw {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+button.session-submit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 30px;
+  min-height: 48px;
+
+  text-align: center;
+
+  background: black;
+  color: white;
+  border: 0;
+  padding: 0 25px;
+  
+}
+
 /*  */
 /*  */
 
+div.new-customer-box {
+  border-left: solid 1px rgb(189, 185, 185);
+}
 
 
 
