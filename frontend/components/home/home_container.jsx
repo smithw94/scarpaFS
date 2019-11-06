@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchProducts } from '../../actions/product_actions';
 
 
 import Home from './home';
@@ -9,7 +10,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  toProduct: 'Link to products page should go here'
+  toProduct: 'Link to products page should go here',
+  fetchProducts: () => dispatch(fetchProducts())
 });
 
 export default connect(mSTP, mDTP)(Home);

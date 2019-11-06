@@ -4,16 +4,16 @@ import { selectProduct } from '../../reducers/selectors';
 
 import ProductShow from './product_show';
 
-const mSTP = ({ entities }, oP) => {
-  const product = selectProduct(entities, entities.products[oP.match.params.id]);
+const mSTP = (state, oP) => {
   return {
-    productId: entities.products[oP.match.params.id],
-    product
+    product: state.entities.products[oP.match.params.id],
   }
 };
 
-const mDTP = dispatch => ({
-  fetchProduct: id => dispatch(fetchProduct(id))
-})
+const mDTP = dispatch => {
+  return {
+    fetchProduct: id => dispatch(fetchProduct(id))
+  }
+}
 
 export default connect(mSTP, mDTP)(ProductShow);
