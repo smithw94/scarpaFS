@@ -11,6 +11,7 @@ const Home = () => (
       <div className="inner-hP1">
         <div className="labels-hP1">
           <span>SCARPA</span>
+          
           <h1>ROCK CLIMBING</h1>
         </div>
         <div className="product-nav">

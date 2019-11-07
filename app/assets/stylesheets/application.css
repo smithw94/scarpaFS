@@ -177,20 +177,22 @@ input {
 
 .nav-left {
   display: inline;
-  padding-left: 25px;
+  padding: 0 3%;
 }
 
 .nav-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 400px;
 }
+
+
 
 .nav-right {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 300px;
 }
 
@@ -202,9 +204,9 @@ input {
   font-size: 9px;
 }
 
-.nav-right:last-child {
+/* .nav-right:last-child {
   padding-right: 30px;
-}
+} */
 
 
 /*  */
