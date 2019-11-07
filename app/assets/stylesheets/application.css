@@ -194,34 +194,7 @@ input {
   width: 300px;
 }
 
-.nav-center a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 4px;
-  font-weight: 650;
-  padding-right: 20px;
 
-  z-index: 971;
-}
-
-.nav-center > a:before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  right: 100%;
-  border-bottom: 3px solid #008CA8;
-  /* -webkit-transition: right 0.3s ease-out; */
-  transition: right 0.3s ease-out;
-}
-
-::selection {
-  background: #008C98;
-  color: #fff;
-  text-shadow: none;
-}
 
 .nav-right a {
   color: #000;
