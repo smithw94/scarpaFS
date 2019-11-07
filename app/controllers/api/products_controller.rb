@@ -1,7 +1,9 @@
 class Api::ProductsController < ApplicationController
 
   def index 
-    @products = Product.all
+    products = Product.all
+
+    @products = products.includes(:details)
   end
 
   def show

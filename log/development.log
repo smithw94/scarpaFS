@@ -10460,3 +10460,194 @@ Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms)
 
 
   [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2019-11-06 15:42:17 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/will/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1417ms (Views: 1409.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products/1" for 127.0.0.1 at 2019-11-06 15:42:19 -0800
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:10
+  Rendering api/products/show.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/show.json.jbuilder (1.6ms)
+Completed 200 OK in 50ms (Views: 3.0ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:42:20 -0800
+Processing by Api::ProductsController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - wrong argument type Symbol (expected Module):
+  app/controllers/api/products_controller.rb:6:in `index'
+
+Started GET "/" for 127.0.0.1 at 2019-11-06 15:42:33 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:42:46 -0800
+Processing by Api::ProductsController#index as JSON
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - wrong argument type Symbol (expected Module):
+  app/controllers/api/products_controller.rb:6:in `index'
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:43:33 -0800
+Processing by Api::ProductsController#index as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+TypeError - wrong argument type Symbol (expected Module):
+  app/controllers/api/products_controller.rb:6:in `index'
+
+Started GET "/" for 127.0.0.1 at 2019-11-06 15:43:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:43:59 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/index.json.jbuilder (21.7ms)
+Completed 200 OK in 30ms (Views: 14.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:47:07 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (3.3ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2)[0m  [["product_id", 1], ["product_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.3ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  Rendered api/products/index.json.jbuilder (70.4ms)
+Completed 200 OK in 81ms (Views: 56.4ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/api/products/1" for 127.0.0.1 at 2019-11-06 15:47:09 -0800
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:10
+  Rendering api/products/show.json.jbuilder
+  Rendered api/products/_product.json.jbuilder (0.5ms)
+  Rendered api/products/show.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-06 15:50:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:50:09 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.0ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2)[0m  [["product_id", 1], ["product_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (18.9ms)
+  Rendered api/products/index.json.jbuilder (32.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 2.0ms)
+
+
+
+NoMethodError - undefined method `attribute_name' for #<Product:0x00007ff664cdb088>
+Did you mean?  attribute_names
+               attribute_was:
+  app/views/api/products/_product.json.jbuilder:1:in `_app_views_api_products__product_json_jbuilder___758493885105360640_70348115300520'
+  app/views/api/products/index.json.jbuilder:3:in `block (2 levels) in _app_views_api_products_index_json_jbuilder__4127661241187324847_70348112997620'
+  app/views/api/products/index.json.jbuilder:2:in `block in _app_views_api_products_index_json_jbuilder__4127661241187324847_70348112997620'
+  app/views/api/products/index.json.jbuilder:1:in `_app_views_api_products_index_json_jbuilder__4127661241187324847_70348112997620'
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-06 15:55:30 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.8ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2)[0m  [["product_id", 1], ["product_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.7ms)
+  Rendered api/products/_product.json.jbuilder (0.2ms)
+  Rendered api/products/index.json.jbuilder (9.5ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/products/1" for 127.0.0.1 at 2019-11-06 15:55:33 -0800
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:10
+  Rendering api/products/show.json.jbuilder
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attributes"."attribute_name", "attributes"."attribute_value" FROM "attributes" INNER JOIN "product_attributes" ON "attributes"."id" = "product_attributes"."attribute_id" WHERE "product_attributes"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/api/products/_product.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (18.7ms)
+  Rendered api/products/show.json.jbuilder (19.9ms)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-06 15:57:24 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for ::1 at 2019-11-06 15:57:34 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.3ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2)[0m  [["product_id", 1], ["product_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.6ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  Rendered api/products/_product.json.jbuilder (0.3ms)
+  Rendered api/products/index.json.jbuilder (27.0ms)
+Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/products/1" for ::1 at 2019-11-06 15:57:39 -0800
+Processing by Api::ProductsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/products_controller.rb:10
+  Rendering api/products/show.json.jbuilder
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "attributes"."attribute_name", "attributes"."attribute_value" FROM "attributes" INNER JOIN "product_attributes" ON "attributes"."id" = "product_attributes"."attribute_id" WHERE "product_attributes"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/views/api/products/_product.json.jbuilder:2
+  Rendered api/products/_product.json.jbuilder (3.1ms)
+  Rendered api/products/show.json.jbuilder (4.7ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 1.4ms)
+
+
