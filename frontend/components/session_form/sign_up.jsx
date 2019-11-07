@@ -43,44 +43,54 @@ class SignUp extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <br />
-          Please {this.props.formType} or {this.props.navLink}
+          <h3 className="logininfo">Personal Information</h3>
+
           {this.renderErrors()}
 
           <div className="login-form">
+            <div className="login-form-comp">
+              <label>First Name:
+                <br/>
+                <input type="text"
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>Last Name:
+                <br/>
+                <input type="text"
+                  value={this.state.last_name}
+                  onChange={this.update('last_name')}
+                  className="login-input"
+                />
+              </label>
+            </div>
+            <br/>
+            <div className="login-info-comp">
+              <h3 className="logininfo">Sign-In Information</h3>
+              <label>Email:
+                <br/>
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="login-input"
+                />
+              </label>
+              <br />
+              <label>Password:
+                <br/>
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+            </div>
+
             <br />
-            <label>First Name:
-              <input type="text"
-                value={this.state.first_name}
-                onChange={this.update('first_name')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>Last Name:
-              <input type="text"
-                value={this.state.last_name}
-                onChange={this.update('last_name')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value="CREATE AN ACCOUNT" />
           </div>
         </form>
       </div>

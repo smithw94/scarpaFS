@@ -241,6 +241,10 @@ input {
   box-sizing: border-box;
 }
 
+.login-form li {
+  text-transform: initial;
+}
+
 .login-form-container {
   text-transform: uppercase;
   display: flex;
@@ -318,7 +322,7 @@ input {
   text-transform: capitalize;
 }
 
-button.session-submit {
+.session-submit {
   margin-top: 15px;
   margin-bottom: 15px;
   letter-spacing: 1px;

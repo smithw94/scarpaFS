@@ -6,6 +6,7 @@ class ProductIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchProducts(this.props.products)
+    this.props.fetchAttributes(this.props.attributes)
   }
 
   render() {
