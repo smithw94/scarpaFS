@@ -1,0 +1,1 @@
+json.extract! attribute, :id, :attribute_name, :attribute_value, :product_ids

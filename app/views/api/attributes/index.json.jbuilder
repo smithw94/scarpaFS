@@ -1,5 +1,6 @@
-@attributes.each do |attr|
-  json.set! attr.id do 
-    json.extract! attr, :id, :attribute_name, :attribute_value, :product_ids
+@attributes.each do |attribute|
+  json.set! attribute.id do 
+    json.partial! 'attribute', attribute: attribute
   end
 end
+

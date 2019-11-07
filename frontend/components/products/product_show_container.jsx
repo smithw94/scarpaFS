@@ -1,18 +1,34 @@
 import { connect } from 'react-redux';
 import { fetchProduct } from '../../actions/product_actions';
+import { fetchAttribute } from '../../actions/attribute_actions';
 import { selectProduct } from '../../reducers/selectors';
 
 import ProductShow from './product_show';
 
 const mSTP = (state, oP) => {
+  let { products, attributes } = state.entities;
+  let productId = oP.match.params.id
+
+  const product = products[productId];
+  let prodAttr = [];
+
+  let attrVals = Object.values(attributes);
+
+  debugger
+  attrVals.forEach(attrVal => (
+    attrVal.includes(productId) ? prodAttr.push(attrVal) : null
+  ))
+  debugger
   return {
-    product: state.entities.products[oP.match.params.id],
+    product,
+    prodAttr
   }
 };
 
 const mDTP = dispatch => {
   return {
-    fetchProduct: id => dispatch(fetchProduct(id))
+    fetchProduct: id => dispatch(fetchProduct(id)),
+    fetchAttribute: id => dispatch(fetchAttribute(id))
   }
 }
 
