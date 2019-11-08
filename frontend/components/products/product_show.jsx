@@ -16,7 +16,7 @@ class ProductShow extends React.Component {
   render() {
     let { product } = this.props;
     if (!product) return null;
-    debugger
+  
     return(
       <div>
         {product.name}

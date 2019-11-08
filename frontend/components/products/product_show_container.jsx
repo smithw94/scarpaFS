@@ -14,11 +14,11 @@ const mSTP = (state, oP) => {
 
   let attrVals = Object.values(attributes);
 
-  debugger
+  
   attrVals.forEach(attrVal => (
     attrVal.includes(productId) ? prodAttr.push(attrVal) : null
   ))
-  debugger
+ 
   return {
     product,
     prodAttr

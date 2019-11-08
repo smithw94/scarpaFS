@@ -1,11 +1,11 @@
-// export const fetchAttrs = () => (
-//   $.ajax({
-//     url: `/api/attributes`
-//   })
-// )
+export const fetchAttrs = () => (
+  $.ajax({
+    url: `/api/attributes`
+  })
+)
 
-// export const fetchAttr = attrId => (
-//   $.ajax({
-//     url: `api/attributes/${attrId}`
-//   })
-// )
+export const fetchAttr = attrId => (
+  $.ajax({
+    url: `api/attributes/${attrId}`
+  })
+)

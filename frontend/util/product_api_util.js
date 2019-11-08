@@ -4,8 +4,8 @@ export const fetchProducts = () => (
   })
 );
 
-// export const fetchProduct = productId => (
-//   $.ajax({
-//     url: `api/products/${productId}`
-//   })
-// )
+export const fetchProduct = productId => (
+  $.ajax({
+    url: `api/products/${productId}`
+  })
+)

@@ -5,7 +5,7 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 
 const receiveProducts = products => ({
   type: RECEIVE_PRODUCTS,
-  products
+  products: payload.products
 })
 
 const receiveProduct = product => ({
@@ -14,7 +14,7 @@ const receiveProduct = product => ({
 })
 
 export const fetchProducts = () => dispatch => APIProduct.fetchProducts()
-  .then(products => dispatch(receiveProducts(products)));
+  .then(payload => dispatch(receiveProducts(payload)));
 
 export const fetchProduct = (productId) => dispatch => APIProduct.fetchProduct(productId)
   .then(product => dispatch(receiveProduct(product)));
