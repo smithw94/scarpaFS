@@ -11,7 +11,7 @@ export const RECEIVE_ATTRIBUTE = 'RECEIVE_ATTRIBUTE';
 
 const receiveAttribute = attribute => ({
   type: RECEIVE_ATTRIBUTE,
-  attribute
+  
 })
 
 

@@ -7,7 +7,7 @@
   json.details do 
     product.details.each do |detail|
       json.set! detail.id do 
-        json.extract! detail, :id, :attribute_name, :attribute_value
+        json.extract! detail, :id, :attribute_name, :attribute_value, :product_ids
       end
     end
   end
