@@ -63,3 +63,22 @@
   background-color: inherit;
   border: none;
 }
+
+.product-attrs {
+  font-size: 22px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product-show-attrs {
+  display: flex;
+  text-transform: uppercase;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 3% 0;
+  font-size: 14px;
+}

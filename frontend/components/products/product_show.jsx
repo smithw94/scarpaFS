@@ -47,18 +47,22 @@ class ProductShow extends React.Component {
                 <button class="dropbtn color-button">COLOR: Black/Orange</button>
               </div>
             </div>
-            <div className="product-show-attrs">
-              <ul>
-                {
-                  prodAttrs.map(attr => (
-                    <li className="product-show-attr" >{attr.attribute_name}: {attr.attribute_value}</li>
-                  ))
-                }
-              </ul>
-            </div>
             <div>
               <button type="submit" className="session-submit">Add to Cart</button>
             </div>
+          </div>
+        </div>
+
+        <div className="product-attrs">
+          <div className="">
+            <h2>Technical Specifications</h2>
+          </div>
+          <div className="product-show-attrs">
+              {
+                prodAttrs.map(attr => (
+                  <div className="product-show-attr"> {attr.attribute_name}: {attr.attribute_value}</div>
+                ))
+              }         
           </div>
         </div>
 
