@@ -1,8 +1,14 @@
-export const fetchProducts = () => (
+export const fetchPayload = () => (
   $.ajax({
     url: `api/products`
   })
 );
+
+// export const fetchProducts = () => (
+//   $.ajax({
+//     url: `api/products`
+//   })
+// );
 
 export const fetchProduct = productId => (
   $.ajax({

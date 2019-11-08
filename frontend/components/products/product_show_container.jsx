@@ -6,29 +6,29 @@ import { selectProduct } from '../../reducers/selectors';
 import ProductShow from './product_show';
 
 const mSTP = (state, oP) => {
-  let { products, attributes } = state.entities;
+  let { products } = state.entities;
   let productId = oP.match.params.id
 
   const product = products[productId];
   let prodAttr = [];
 
-  let attrVals = Object.values(attributes);
+  // let attrVals = Object.values(attributes);
 
   
-  attrVals.forEach(attrVal => (
-    attrVal.includes(productId) ? prodAttr.push(attrVal) : null
-  ))
+  // attrVals.forEach(attrVal => (
+  //   attrVal.includes(productId) ? prodAttr.push(attrVal) : null
+  // ))
  
   return {
-    product,
-    prodAttr
+    product
+    // prodAttr
   }
 };
 
 const mDTP = dispatch => {
   return {
     fetchProduct: id => dispatch(fetchProduct(id)),
-    fetchAttribute: id => dispatch(fetchAttribute(id))
+    // fetchAttribute: id => dispatch(fetchAttribute(id))
   }
 }
 

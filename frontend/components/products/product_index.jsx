@@ -6,7 +6,7 @@ class ProductIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchProducts(this.props.products)
-    this.props.fetchAttributes(this.props.attributes)
+    // this.props.fetchAttributes(this.props.attributes)
   }
 
   render() {
@@ -19,7 +19,6 @@ class ProductIndex extends React.Component {
             products.map(product => (
               <ProductIndexItem
                 product={product}
-                
               />
             ))
           }

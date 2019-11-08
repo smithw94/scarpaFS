@@ -5,8 +5,7 @@ import Root from "./components/root";
 import configureStore from "./store/store";
 
 // import { fetchAttrs } from './util/attributes_api_util';
-
-import { fetchProducts } from './util/product_api_util';
+// import { fetchProducts } from './util/product_api_util';
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -29,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.dispatch = store.dispatch;
   // window.fetchAttrs = fetchAttrs;
   // TESTING END
-  window.fetchProducts = fetchProducts;
+  
+
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);

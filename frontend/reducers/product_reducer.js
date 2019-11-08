@@ -4,10 +4,10 @@ const productsReducer = ( state = {}, action) => {
   Object.freeze(state)
   switch (action.type) {
     case RECEIVE_PRODUCTS:
-      return Object.assign({}, state, action.products);
+      return Object.assign({}, state, action.payload.products);
     
     case RECEIVE_PRODUCT:
-      return Object.assign({}, state, { [action.product.id]: action.product })
+      return Object.assign({}, state, { [action.payload.product.id]: action.payload.product })
     default:
       return state;
   }
