@@ -1,0 +1,450 @@
+/* line 1, /home/will/Desktop/scarpa/app/assets/stylesheets/home.scss */
+.nav-center a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 650;
+  border-bottom: 3px solid transparent;
+  transition: 0.5s ease-out;
+}
+
+/* line 14, /home/will/Desktop/scarpa/app/assets/stylesheets/home.scss */
+.nav-center a:hover {
+  border-color: #008CA8;
+}
+/* line 6, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.homePage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 19, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.homePage1 {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+/* line 29, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.homePhoto1 {
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 37, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.homePage1b {
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* line 44, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.inner-hP1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* line 59, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.labels-hP1 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 30%;
+  margin-bottom: 9%;
+}
+
+/* line 67, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.inner-hP1 h1 {
+  font-size: 6vw;
+}
+
+/* line 71, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.product-nav {
+  padding: 10px 75px;
+  background-color: #1f1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  height: 30px;
+}
+
+/* line 84, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.product-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  margin: 0 15px;
+  border-bottom: 3px solid transparent;
+  transition: 0.5s ease-out;
+}
+
+/* line 98, /home/will/Desktop/scarpa/app/assets/stylesheets/products.scss */
+.product-nav a:hover {
+  border-color: #008CA8;
+}
+/* line 1, /home/will/Desktop/scarpa/app/assets/stylesheets/signup.scss */
+.logininfo {
+  padding-bottom: 15px;
+}
+
+/* line 5, /home/will/Desktop/scarpa/app/assets/stylesheets/signup.scss */
+.login-info-comp {
+  padding-bottom: 15px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  */
+/*  */
+
+body {
+  font-family: "FuturaPT-Bold",
+  "Helvetica-Bold",
+  Helvetica,
+  sans-serif;
+}
+
+input {
+  border: black solid 1px;
+  padding: 4px 25px;
+  box-sizing: border-box;
+
+}
+
+.nav {
+
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: space-around;
+  
+  
+  border-top: black solid 12px;
+
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.nav-left {
+  display: inline;
+  padding: 0 3%;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+
+
+.nav-right a {
+  color: #000;
+  text-decoration: none;
+  font-size: 9px;
+}
+
+/* .nav-right:last-child {
+  padding-right: 30px;
+} */
+
+
+/*  */
+/*  */
+
+.login-form {
+  box-sizing: border-box;
+}
+
+.login-form li {
+  text-transform: initial;
+}
+
+.login-form-container {
+  text-transform: uppercase;
+  display: flex;
+  list-style: none;
+  font-family: "FuturaPT-Book",
+  Helvetica,
+  sans-serif;
+  padding-top: 50px;
+}
+
+.login-form-box {
+  width: 60%;
+  box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.login-form-box label {
+  text-transform: capitalize;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.login-form-container h3 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  line-height: 30px;
+}
+
+.login-form-container p {
+  font-size: 15px;
+  text-transform: initial;
+  letter-spacing: 1px;
+  /* margin-bottom: 15px; */
+  line-height: 25px;
+}
+
+.dummy label {
+  font-size: 13px;
+}
+
+.dummy span {
+  text-transform: initial;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.dummy input {
+  margin-left: 0;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.new-customer-box {
+  /* border-left: grey solid 1px;
+  padding: 40px; */
+  width: 50%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.backgroundImg {
+  width: 50%;
+  height: auto;
+}
+
+.login-input {
+  width: 50%;
+  padding: 16px;
+}
+
+.login-form-container a {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.session-submit {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 30px;
+  min-height: 48px;
+
+  text-align: center;
+
+  background: black;
+  color: white;
+  border: 0;
+  padding: 0 25px;
+  
+}
+
+/*  */
+/*  */
+
+div.new-customer-box {
+  border-left: solid 1px rgb(189, 185, 185);
+}
+
+.new-customer-box p {
+  font-size: 13px;
+  margin: 15px 0 15px 0;
+  
+}
+
+
+
+
+
