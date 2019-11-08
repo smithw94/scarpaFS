@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 class ProductIndex extends React.Component {
 
   componentDidMount() {
-    this.props.fetchProducts(this.props.products)
+    
+    if (this.props.products.length === 0) this.props.fetchProducts(this.props.products);
     // this.props.fetchAttributes(this.props.attributes)
   }
 
@@ -13,17 +14,38 @@ class ProductIndex extends React.Component {
     let { products } = this.props;
 
     return(
-      <div>
-        <ul>
-          {
-            products.map(product => (
-              <ProductIndexItem
-                product={product}
-              />
-            ))
-          }
-        </ul>
-        <Link to="/">Home</Link>
+      <div className="homePage">
+        <div className="index-container">
+
+          <div className="sidebar sidebar-nav">
+            <ul>
+              <li>Best Use</li>
+              <li>Climbing Category</li>
+              <li>Gender</li>
+              <li>Price</li>
+              <li>Weight Range</li>
+              <li>Climbing Subcategory</li>
+              <li>Closure</li>
+              <li>Primary Material</li>
+              <li>Sole Rubber</li>
+              <li>Color Family</li>
+            </ul>
+          </div>
+          <div className="product-list">
+            <ul >
+              {
+                products.map(product => (
+                  <ProductIndexItem
+                    product={product}
+                    key={product.id}
+                  />
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+        <br/>
+        <Link className="home-link" to="/">Home</Link>
       </div>
     )
   }
