@@ -1,0 +1,65 @@
+.product-show-page {
+  justify-content: center;
+  padding: 5% 5%;
+  border-top: solid 1px gray;
+  font-family: "FuturaPT-Medium", Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.product-show {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-show-image {
+  width: 75%;
+  border-bottom: solid 1px gray;
+}
+
+.showImage {
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-show-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+
+.product-show-name {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: gray 1px solid;
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+
+.product-show-price {
+  padding: 15px 0;
+}
+
+.product-rating {
+  padding: 5% 0;
+  
+}
+
+.product-show-description {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.product-button-selections {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5% 0;
+}
+
+.dropbtn {
+  background-color: inherit;
+  border: none;
+}
