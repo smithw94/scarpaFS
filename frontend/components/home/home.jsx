@@ -15,9 +15,9 @@ const Home = () => (
           <h1>ROCK CLIMBING</h1>
         </div>
         <div className="product-nav">
-          <Link to="/products">Shop all</Link>
-          <Link to="/products">Rock Shoes</Link>
-          <Link to="/products">Approach</Link>
+          <Link to="/products" >Shop all</Link>
+          <Link to="/products" >Rock Shoes</Link>
+          <Link to="/products/?approach">Approach</Link>
         </div>
       </div>
     </div>
