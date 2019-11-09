@@ -13,7 +13,7 @@ class ProductShow extends React.Component {
   }
   
   render() {
-    debugger
+    // debugger
     let { product, prodAttrs } = this.props;
     return(
       <div className="product-show-page">
@@ -29,6 +29,7 @@ class ProductShow extends React.Component {
             <div className="product-show-name">
               <h3>{product.name}</h3>
             </div>
+            
             <div className="product-show-price">
               <p>${product.price}0 USD</p>
             </div>
@@ -43,19 +44,9 @@ class ProductShow extends React.Component {
             </div>
 
             <div className="product-button-selections">
-              <div className="product-size-select">
-                <button class="dropbtn size-button">
-                  SIZE:
-                </button>
-                
-              </div>
-              <div className="product-color-select">
-                <button class="dropbtn color-button">COLOR: Black/Orange</button>
-              </div>
+                <ProductSizeSelection />
             </div>
-            <div>
-              <button type="submit" className="session-submit">Add to Cart</button>
-            </div>
+
           </div>
         </div>
 

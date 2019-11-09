@@ -7,3 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Product.create(name: 'CHIMERA', price: 210.0, description: "The pinnacle of rock shoe construction—specialized, meticulously crafted and refined to perform at the highest level.
+")
+Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
+Product.create(name: 'DRAGO', price: 200.0, description: "Sensitive yet supportive, powerful yet precise— the superlative shoe for steep, demanding terrain. ")
+Product.create(name: 'FURIA S', price: 200.0, description: "A lace-up version of our revolutionary Drago. ")
+Product.create(name: 'FURIA AIR', price: 117.0, description: "Sensitivity redefined, a new second skin feeling featuring a cutting edge design at an incredibly low weight.")
+Product.create(name: 'MAGO', price: 195.0, description: "Our most supportive lace up is built to excel on micro edges on steep, demanding routes.")
+Product.create(name: 'BOOSTIC', price: 190.0, description: "The most supportive shoe in our specialized performance category. ")
+Product.create(name: 'INSTINCT', price: 175.0, description: "The most supportive shoe in the Instinct family. ")
+Product.create(name: 'INSTINCT AIR', price: 180.0, description: "The most sensitive Instinct shoe-a soft, specialized slipper for training and bouldering. ")
+Product.create(name: 'INSTINCT VSR', price: 185.0, description: "The softest shoe in the Instinct family with the comfort of a slipper. ")

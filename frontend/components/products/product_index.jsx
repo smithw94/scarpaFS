@@ -32,7 +32,7 @@ class ProductIndex extends React.Component {
             </ul>
           </div>
           <div className="product-list">
-            <ul >
+            
               {
                 products.map(product => (
                   <ProductIndexItem
@@ -41,7 +41,7 @@ class ProductIndex extends React.Component {
                   />
                 ))
               }
-            </ul>
+            
           </div>
         </div>
         <br/>

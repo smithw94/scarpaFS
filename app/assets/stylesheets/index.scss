@@ -15,6 +15,9 @@
 
 .product-list {
   width: 75%;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-between;
 }
 
 .home-link {

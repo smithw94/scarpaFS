@@ -6,7 +6,7 @@ import { selectProductAttrs } from '../../reducers/selectors';
 import ProductShow from './product_show';
 
 const mSTP = (state, ownProps) => {
-  debugger
+  // debugger
   let { products, attributes } = state.entities;
   
 
