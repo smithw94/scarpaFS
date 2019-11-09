@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import ProductSizeSelection from './product_size_selection';
+
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,7 @@ class ProductShow extends React.Component {
   }
   
   render() {
+    debugger
     let { product, prodAttrs } = this.props;
     return(
       <div className="product-show-page">
@@ -42,6 +45,9 @@ class ProductShow extends React.Component {
             <div className="product-button-selections">
               <div className="product-size-select">
                 <button class="dropbtn size-button">SIZE:</button>
+                <div>
+                  <ProductSizeSelection />
+                </div>
               </div>
               <div className="product-color-select">
                 <button class="dropbtn color-button">COLOR: Black/Orange</button>
@@ -54,7 +60,7 @@ class ProductShow extends React.Component {
         </div>
 
         <div className="product-attrs">
-          <div className="">
+          <div className="product-attrs-title">
             <h2>Technical Specifications</h2>
           </div>
           <div className="product-show-attrs">
