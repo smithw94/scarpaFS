@@ -22,7 +22,7 @@ const Greeting = ({ currentUser, logout }) => {
           currentUser ? <Link to="/" onClick={logout}>Log Out</Link> : 
           <Link to="/login">MY ACCOUNT </Link> 
         }
-        <Link to="/cart"> CART ()</Link>
+        <Link to="/cart"> CART (0)</Link>
         <Link to="/"><img src={ window.magni } className="search-icon"/></Link>
       </div>
     </nav>

@@ -20759,3 +20759,61 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 534ms (Views: 533.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/products" for 127.0.0.1 at 2019-11-08 17:25:03 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (3.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (3.8ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.6ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 2], ["id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (3.0ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (66.5ms)
+Completed 200 OK in 77ms (Views: 60.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-08 17:25:58 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 580ms (Views: 579.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-08 17:26:00 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.4ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (2.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2, $3)[0m  [["id", 1], ["id", 2], ["id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  Rendered api/products/_product.json.jbuilder (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 3]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/_product.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  Rendered api/products/index.json.jbuilder (21.8ms)
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-08 17:30:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 585ms (Views: 584.2ms | ActiveRecord: 0.0ms)
+
+

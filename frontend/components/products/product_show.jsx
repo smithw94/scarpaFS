@@ -44,10 +44,10 @@ class ProductShow extends React.Component {
 
             <div className="product-button-selections">
               <div className="product-size-select">
-                <button class="dropbtn size-button">SIZE:</button>
-                <div>
-                  <ProductSizeSelection />
-                </div>
+                <button class="dropbtn size-button">
+                  SIZE:
+                </button>
+                
               </div>
               <div className="product-color-select">
                 <button class="dropbtn color-button">COLOR: Black/Orange</button>
