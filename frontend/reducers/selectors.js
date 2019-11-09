@@ -13,3 +13,18 @@ export const selectProductAttrs = (attributes, product) => {
   return productAttr;
 }
 
+
+export const selectAttr = (attributes, attrId) => {
+  
+  return attributes[attrId].product_ids
+}
+
+export const selectProducts = (products, productIds) => {
+  let selectedProds = [];
+  productIds.forEach(id => (
+    selectedProds.push(products[id])
+  ))
+  debugger
+  return selectedProds
+}
+

@@ -17,7 +17,6 @@ class Home extends React.Component {
   
   render() {
 
-  debugger
   return (
   <div className="homePage">
     <div className="homePage1">
@@ -31,7 +30,7 @@ class Home extends React.Component {
         <div className="product-nav">
           <Link to="/products" >Shop all</Link>
           <Link to="/products" >Rock Shoes</Link>
-          <Link to="/products/?approach">Approach</Link>
+          <Link to="/products/?1">Approach</Link>
         </div>
       </div>npm 
     </div>

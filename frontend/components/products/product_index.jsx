@@ -11,8 +11,8 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-    let { products, filter } = this.props;
-    // debugger
+    let { products } = this.props;
+    debugger
     return(
       <div className="homePage">
         <div className="index-container">
