@@ -18,3 +18,12 @@ Product.create(name: 'BOOSTIC', price: 190.0, description: "The most supportive 
 Product.create(name: 'INSTINCT', price: 175.0, description: "The most supportive shoe in the Instinct family. ")
 Product.create(name: 'INSTINCT AIR', price: 180.0, description: "The most sensitive Instinct shoe-a soft, specialized slipper for training and bouldering. ")
 Product.create(name: 'INSTINCT VSR', price: 185.0, description: "The softest shoe in the Instinct family with the comfort of a slipper. ")
+
+# Approach
+Product.create(name: 'Mescalito Mid Men', price: 239.0, description: "A souped-up version of our all-new Mescalito is our premier approach shoe for serious mountain missions.")
+Product.create(name: 'Mescalito Mid Women', price: 239.0, description: "A souped-up version of our all-new Mescalito is our premier approach shoe for serious mountain missions.")
+Product.create(name: 'Mescalito', price: 189.0, description: "Our premium approach shoe, designed for technical hikes, is both durable and lightweight for ultimate performance.")
+
+
+# Attributes
+Attribute.create(attribute_name: 'category', attribute_value: 'approach')

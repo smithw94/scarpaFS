@@ -4,7 +4,21 @@ import { Link } from 'react-router-dom';
 
 
 
-const Home = () => (
+class Home extends React.Component {
+  
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.props.fetchProducts() 
+  }
+
+  
+  render() {
+
+  debugger
+  return (
   <div className="homePage">
     <div className="homePage1">
       <img className="homePhoto1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
@@ -19,13 +33,14 @@ const Home = () => (
           <Link to="/products" >Rock Shoes</Link>
           <Link to="/products/?approach">Approach</Link>
         </div>
-      </div>
+      </div>npm 
     </div>
   </div>
- 
+  )
+  }
     
   
-);
+};
   
 
 export default Home;

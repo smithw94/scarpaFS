@@ -12,3 +12,4 @@ export const selectProductAttrs = (attributes, product) => {
   
   return productAttr;
 }
+
