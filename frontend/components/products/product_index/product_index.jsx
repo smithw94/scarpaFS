@@ -1,31 +1,43 @@
 import React from 'react';
-import ProductIndexItem from './product_index_item';
+import SidebarFilter from './sidebar_filter';
 import { Link } from 'react-router-dom';
 
 class ProductIndex extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      filterText: ''
+    }
+  }
 
   componentDidMount() {
-    
     if (this.props.products.length === 0) this.props.fetchProducts(this.props.products);
-    // this.props.fetchAttributes(this.props.attributes)
+  }
+
+  handleFilterTextChange(filterText) {
+    this.setState({
+      filterText: filterText
+    });
   }
 
   render() {
-    let { products } = this.props;
-    
+
     return(
       <div className="homePage">
-          <div className="product-list"> 
+        <div className="index-filter">
+          <SidebarFilter 
+            filterText={this.state.filterText}
+            onFilterTextChange={this.handleFilterTextChange}
+          />
+        </div>
 
-            {
-              products.map(product => (
-                <ProductIndexItem
-                  product={product}
-                  key={product.id}
-                />
-              ))
-            }
-          </div>
+        <div className="product-table-container">
+          <ProductTableContainer 
+            filterText={this.state.filterText}
+          />
+        </div>
+
         <Link className="home-link" to="/">Home</Link>
       </div>
     )
