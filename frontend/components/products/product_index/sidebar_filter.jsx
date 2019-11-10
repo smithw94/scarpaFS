@@ -5,10 +5,15 @@ class SidebarFilter extends React.Component {
     super(props)
 
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this)
+    this.handleFilterAttrChange = this.handleFilterAttrChange.bind(this)
   }
 
   handleFilterTextChange(e) {
     this.props.onFilterTextChange(e.target.value)
+  }
+
+  handleFilterAttrChange(e) {
+    this.props.onFilterAttrChange(e.target.value)
   }
 
   render() {
@@ -27,7 +32,11 @@ class SidebarFilter extends React.Component {
           </label>
           <br/>
           <label>
-            <input type="checkbox" value="1" />
+            <input
+              type="checkbox" 
+              value={1}
+              onChange={this.handleFilterAttrChange}
+            />
             Approach
           </label>
           <br />
