@@ -9,13 +9,11 @@ export const selectProductAttrs = (attributes, product) => {
   details.map(detailId => {
     productAttr.push(attributes[detailId])
   })
-  
   return productAttr;
 }
 
 
 export const selectAttr = (attributes, attrId) => {
-  
   return attributes[attrId].product_ids
 }
 
