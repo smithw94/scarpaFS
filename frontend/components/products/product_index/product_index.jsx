@@ -1,6 +1,8 @@
 import React from 'react';
-import SidebarFilter from './sidebar_filter';
 import { Link } from 'react-router-dom';
+
+import SidebarFilter from './sidebar_filter';
+import ProductTable from './product_tabel';
 
 class ProductIndex extends React.Component {
   constructor(props) {
@@ -9,6 +11,8 @@ class ProductIndex extends React.Component {
     this.state = {
       filterText: ''
     }
+    
+    this.handleFilterTextChange = this.handleFilterTextChange.bind(this)
   }
 
   componentDidMount() {
@@ -33,8 +37,9 @@ class ProductIndex extends React.Component {
         </div>
 
         <div className="product-table-container">
-          <ProductTableContainer 
+          <ProductTable
             filterText={this.state.filterText}
+            products={this.props.products}
           />
         </div>
 

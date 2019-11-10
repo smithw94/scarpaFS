@@ -3,6 +3,8 @@ import React from 'react';
 class SidebarFilter extends React.Component {
   constructor(props) {
     super(props)
+
+    this.handleFilterTextChange = this.handleFilterTextChange.bind(this)
   }
 
   handleFilterTextChange(e) {
@@ -16,6 +18,7 @@ class SidebarFilter extends React.Component {
         <form className="form-filter">
           <br/>
           <label>Search
+            <br/>
             <input 
               type="text"
               value={this.props.filterText}
