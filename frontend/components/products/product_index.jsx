@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductIndexItem from './product_index_item';
 import { Link } from 'react-router-dom';
+import BestUse from './product_index_filters/best_use';
 
 class ProductIndex extends React.Component {
 
@@ -12,24 +13,34 @@ class ProductIndex extends React.Component {
 
   render() {
     let { products } = this.props;
-    debugger
+    
     return(
       <div className="homePage">
         <div className="index-container">
 
           <div className="sidebar sidebar-nav">
-            <ul>
-              <li>Best Use</li>
-              <li>Climbing Category</li>
-              <li>Gender</li>
-              <li>Price</li>
-              <li>Weight Range</li>
-              <li>Climbing Subcategory</li>
-              <li>Closure</li>
-              <li>Primary Material</li>
-              <li>Sole Rubber</li>
-              <li>Color Family</li>
-            </ul>
+            <form>
+              <BestUse />
+              <br/>
+              <label>Climbing Category</label>
+              <br/>
+              <label>Gender</label>
+              <br/>
+              <label>Price</label>
+              <br/>
+              <label>Weight Range</label>
+              <br/>
+              <label>Climbing Subcategory</label>
+              <br/>
+              <label>Closure</label>
+              <br/>
+              <label>Primary Material</label>
+              <br/>
+              <label>Sole Rubber</label>
+              <br/>
+              <label>Color Family</label>
+            </form>
+            
           </div>
           <div className="product-list">
             

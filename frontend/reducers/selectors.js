@@ -22,7 +22,6 @@ export const selectProducts = (products, productIds) => {
   productIds.forEach(id => (
     selectedProds.push(products[id])
   ))
-  debugger
   return selectedProds
 }
 
