@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container'
 import SignupFormContainer from './session_form/signup_form_container';
-import ProductIndexContainer from './products/product_index_container';
+import ProductIndexContainer from './products/product_index/product_index_container';
 import HomeContainer from './home/home_container';
 import ProductShowContainer from './products/product_show_container';
 
