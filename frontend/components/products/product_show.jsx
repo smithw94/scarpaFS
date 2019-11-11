@@ -3,21 +3,40 @@ import { Link } from 'react-router-dom';
 
 import ProductSizeSelection from './product_size_selection';
 import ReviewContainer from './review_container'
+import ReviewList from './review_list';
 
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      rating: 5,
+      body: ''
+    }
+
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // this.props.fetchProduct(this.props.match.params.id)
+  update(field) {
+    this.setState(field)
   }
+
+  handleSubmit(e) {
+    
+    e.preventDefault();
+    let reviewSubmit = Object.assign(
+      {}, this.state, { product_id: this.props.product.id }
+    );
+    this.props.createReview(reviewSubmit)
+  }
+
   
   render() {
     // debugger
 
-    let { product, prodAttrs, reviews, average_rating } = this.props;
-    
+    let { product, prodAttrs, reviews } = this.props;
+
     return(
       <div className="product-show-page">
         
@@ -68,13 +87,19 @@ class ProductShow extends React.Component {
 
         <div className="reviewsSection">
           <h2>Reviews</h2>
-          {reviews.map(review => (
-            <div>
-              {review.body}
-            </div>
-          ))}
+          <div>
+            <ReviewList 
+              reviews={reviews}
+            />
+          </div>
 
-          <ReviewContainer />
+          <ReviewContainer 
+            id={product.id}
+            rating={this.state.rating}
+            body={this.state.body}
+            onUpdate={this.update}
+            onSubmit={this.handleSubmit}
+          />
         </div>
 
         <div className="show-index-link">

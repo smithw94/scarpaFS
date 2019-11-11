@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchProduct } from '../../actions/product_actions';
 import { fetchAttribute } from '../../actions/attribute_actions';
 import { selectProductAttrs, selectProductReviews } from '../../reducers/selectors';
+import { createReview } from '../../actions/review_actions';
 
 import ProductShow from './product_show';
 
@@ -23,6 +24,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
   return {
+    createReview: review => dispatch(createReview(review))
     // fetchProduct: id => dispatch(fetchProduct(id)),
     // fetchAttribute: id => dispatch(fetchAttribute(id))
   }

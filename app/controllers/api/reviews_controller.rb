@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-  before_action: require_logged_in
+  before_action :require_logged_in
 
   def create
     @review = current_user.reviews.new(review_params)
@@ -7,7 +7,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render :show
     else
-      render json: @review, status: :unprocessable_entity
+      redirect_to "/#/products"
     end
   end
 
@@ -15,4 +15,5 @@ class Api::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:body, :rating, :product_id)
+  end
 end
