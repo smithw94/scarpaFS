@@ -38,3 +38,6 @@ ProductAttribute.create(product_id: 11, attribute_id: 1)
 ProductAttribute.create(product_id: 12, attribute_id: 1)
 ProductAttribute.create(product_id: 13, attribute_id: 1)
 
+#Reviews
+
+

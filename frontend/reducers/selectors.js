@@ -12,7 +12,6 @@ export const selectProductAttrs = (attributes, product) => {
   return productAttr;
 }
 
-
 export const selectProductIds = (attributes, attrIds) => {
   let productIds = [];
   attrIds.forEach(id => (
@@ -20,10 +19,8 @@ export const selectProductIds = (attributes, attrIds) => {
       !productIds.includes(prodId) ? productIds.push(prodId) : null
     ))
   ))
-  debugger
   return productIds
 }
-
 
 export const selectProducts = (products, productIds) => {
   let selectedProds = [];

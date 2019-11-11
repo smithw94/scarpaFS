@@ -3,7 +3,7 @@ class Api::ProductsController < ApplicationController
   def index 
     products = Product.all
 
-    @products = products.includes(:details)
+    @products = products.includes(:details).includes(:reviews)
   end
 
   def show

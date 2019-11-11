@@ -22,13 +22,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :reviews,
-    foreign_key: :author_id
-    
-  has_many :favorites
-  has_many :favorite_benches,
-    through: :favorites,
-    source: :bench
+  has_many :reviews
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

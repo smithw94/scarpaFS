@@ -18,4 +18,10 @@ class Product < ApplicationRecord
   has_many :details,
     through: :product_attributes,
     source: :m_attribute
+
+  has_many :reviews
+
+  def average_rating
+    reviews.average(:rating)
+  end
 end
