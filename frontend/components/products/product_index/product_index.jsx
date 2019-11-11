@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import SidebarFilter from './sidebar_filter';
-import ProductTable from './product_tabel';
+import ProductTableContainer from './product_table_container';
 
 class ProductIndex extends React.Component {
   constructor(props) {
@@ -37,12 +37,10 @@ class ProductIndex extends React.Component {
 
     if (newState.includes(id)) {
       newState.splice(newState.indexOf(id), 1)
-      debugger
       return this.setState({
         filterAttrs: newState
       });
     } else {
-      debugger
       newState.push(id)
       return this.setState({
         filterAttrs: newState
@@ -51,7 +49,6 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-    debugger
     return(
       <div className="homePage">
         <div className="index-filter">
@@ -64,9 +61,9 @@ class ProductIndex extends React.Component {
         </div>
 
         <div className="product-table-container">
-          <ProductTable
+          <ProductTableContainer
+            filterAttrs={this.state.filterAttrs}
             filterText={this.state.filterText}
-            products={this.props.products}
           />
         </div>
 
