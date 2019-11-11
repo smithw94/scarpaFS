@@ -19,7 +19,7 @@ export const selectProductIds = (attributes, attrIds) => {
       !productIds.includes(prodId) ? productIds.push(prodId) : null
     ))
   ))
-  return productIds
+  return productIds;
 }
 
 export const selectProducts = (products, productIds) => {
@@ -27,6 +27,15 @@ export const selectProducts = (products, productIds) => {
   productIds.forEach(id => (
     selectedProds.push(products[id])
   ))
-  return selectedProds
+  return selectedProds;
+}
+
+export const selectProductReviews = (reviews, product) => {
+  const reviewIds = product.review_ids;
+  let selectedReviews = [];
+  reviewIds.forEach(id => (
+    selectedReviews.push(reviews[id])
+  ))
+  return selectedReviews;
 }
 

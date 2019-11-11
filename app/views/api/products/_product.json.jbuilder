@@ -1,4 +1,4 @@
-json.extract!  product, :id, :name, :description, :price, :average_rating, :detail_ids
+json.extract!  product, :id, :name, :description, :price, :average_rating, :detail_ids, :review_ids
 
 
 # json.details do

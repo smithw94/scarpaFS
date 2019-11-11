@@ -14,7 +14,9 @@ class ProductShow extends React.Component {
   
   render() {
     // debugger
-    let { product, prodAttrs } = this.props;
+
+    let { product, prodAttrs, reviews, average_rating } = this.props;
+    
     return(
       <div className="product-show-page">
         
@@ -35,7 +37,7 @@ class ProductShow extends React.Component {
             </div>
 
             <div className="product-rating">
-              <h3>*****</h3>
+              <h1>{product.average_rating}</h1>
               <p>Reviews Add Your Review</p>
             </div>
             
@@ -61,6 +63,14 @@ class ProductShow extends React.Component {
                 ))
               }         
           </div>
+        </div>
+
+        <div className="reviewsSection">
+          {reviews.map(review => (
+            <div>
+              {review.body}
+            </div>
+          ))}
         </div>
 
         <div className="show-index-link">

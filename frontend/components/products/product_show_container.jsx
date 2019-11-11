@@ -1,21 +1,23 @@
 import { connect } from 'react-redux';
 import { fetchProduct } from '../../actions/product_actions';
 import { fetchAttribute } from '../../actions/attribute_actions';
-import { selectProductAttrs } from '../../reducers/selectors';
+import { selectProductAttrs, selectProductReviews } from '../../reducers/selectors';
 
 import ProductShow from './product_show';
 
-const mSTP = (state, ownProps) => {
-  // debugger
-  let { products, attributes } = state.entities;
-  
 
+// I want to select all reviews of a product
+const mSTP = (state, ownProps) => {
+  let { products, attributes, reviews } = state.entities;
+  
   let productId = ownProps.match.params.id;
   const product = products[productId];
-  
+  reviews = selectProductReviews(reviews, product);
+
   return {
     product,
-    prodAttrs: selectProductAttrs(attributes, product)
+    prodAttrs: selectProductAttrs(attributes, product),
+    reviews
   }
 };
 
