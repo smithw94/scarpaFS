@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ProductSizeSelection from './product_size_selection';
+import ReviewContainer from './review_container'
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -66,11 +67,14 @@ class ProductShow extends React.Component {
         </div>
 
         <div className="reviewsSection">
+          <h2>Reviews</h2>
           {reviews.map(review => (
             <div>
               {review.body}
             </div>
           ))}
+
+          <ReviewContainer />
         </div>
 
         <div className="show-index-link">

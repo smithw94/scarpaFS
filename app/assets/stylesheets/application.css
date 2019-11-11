@@ -139,6 +139,10 @@ select {
   text-overflow: '';
 }
 
+a, select, button:focus, button {
+  outline: 0;
+}
+
 /*  */
 /*  */
 
