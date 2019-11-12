@@ -45,7 +45,7 @@ class ProductShow extends React.Component {
   // }
   
   render() {
-    let { product, prodAttrs, reviews } = this.props;
+    let { product, prodAttrs, id } = this.props;
     let average_rating = parseInt(product.average_rating);
     average_rating > 0 ? average_rating : average_rating = 0
     
