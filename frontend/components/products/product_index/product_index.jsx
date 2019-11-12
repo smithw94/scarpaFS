@@ -17,9 +17,7 @@ class ProductIndex extends React.Component {
     this.handleFilterAttrChange = this.handleFilterAttrChange.bind(this)
   }
 
-  componentDidMount() {
-    if (this.props.products.length === 0) this.props.fetchProducts(this.props.products);
-  }
+
 
   handleFilterTextChange(filterText) {
     this.setState({

@@ -31,11 +31,16 @@ export const selectProducts = (products, productIds) => {
 }
 
 export const selectProductReviews = (reviews, product) => {
-  const reviewIds = product.review_ids;
+  
+  let x = Object.values(reviews);
   let selectedReviews = [];
-  reviewIds.forEach(id => (
-    selectedReviews.push(reviews[id])
-  ))
+
+  x.forEach(review => {
+    if (review.product_id === product.id) {
+      selectedReviews.push(reviews[review.id])
+    }
+  })
+  
   return selectedReviews;
 }
 

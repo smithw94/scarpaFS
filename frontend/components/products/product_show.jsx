@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ProductSizeSelection from './product_size_selection';
 import ReviewContainer from './review_container'
-import ReviewList from './review_list';
+import ReviewListContainer from './review_list_container';
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class ProductShow extends React.Component {
       rating: 5,
       body: ''
     }
+    
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,7 +24,6 @@ class ProductShow extends React.Component {
   }
 
   handleSubmit(e) {
-    
     e.preventDefault();
     let reviewSubmit = Object.assign(
       {}, this.state, { product_id: this.props.product.id }
@@ -31,10 +31,13 @@ class ProductShow extends React.Component {
     this.props.createReview(reviewSubmit)
   }
 
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.reviews.length !== this.props.reviews.length) {
+  //     this.fetchProducts()
+  //   }
+  // }
   
   render() {
-    // debugger
-
     let { product, prodAttrs, reviews } = this.props;
 
     return(
@@ -88,8 +91,8 @@ class ProductShow extends React.Component {
         <div className="reviewsSection">
           <h2>Reviews</h2>
           <div>
-            <ReviewList 
-              reviews={reviews}
+            <ReviewListContainer
+              product={product}
             />
           </div>
 

@@ -4,7 +4,7 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_RESPONSE = 'RECEIVE_RESPONSE'
 
 const receiveReview = review => {
-  
+
   return {
   type: RECEIVE_REVIEW,
   review

@@ -1,16 +1,29 @@
 import React from 'react'
+import ReviewItem from './review_item';
 
-const ReviewList = ({ reviews }) => (
-  <div>
-    {reviews.map(review => (
+class ReviewList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+    let { reviews } = this.props;
+    let rows = [];
+    reviews.forEach(review => (
+      rows.push(
+        <ReviewItem
+          review={review}
+        />
+      )
+    ))
+
+    return (
       <div>
-        {review.rating}
-        <br/>
-        {review.body}
-        <br/>
+        {rows}
       </div>
-    ))}
-  </div>
-)
+    );
+  }
+}
 
 export default ReviewList;
