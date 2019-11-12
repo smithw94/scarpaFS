@@ -46,7 +46,7 @@ class ProductShow extends React.Component {
   render() {
     let { product, prodAttrs, reviews } = this.props;
     let average_rating = parseInt(product.average_rating);
-    debugger
+   
     return(
       <div className="product-show-page">
         
