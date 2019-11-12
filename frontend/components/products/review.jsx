@@ -32,6 +32,13 @@ class Review extends React.Component {
               onChange={this.update("rating")}
             />
           </label>
+          <label>Username
+            <input 
+              type="string"
+              value={this.props.username}
+              onChange={this.update("username")}
+            />
+          </label>
           <br/>
           <label>Review
             <textarea

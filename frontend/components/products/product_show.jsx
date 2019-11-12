@@ -33,7 +33,8 @@ class ProductShow extends React.Component {
 
     this.setState({
       rating: 5,
-      body: ''
+      body: '',
+      username: ''
     })
   }
 
@@ -46,7 +47,8 @@ class ProductShow extends React.Component {
   render() {
     let { product, prodAttrs, reviews } = this.props;
     let average_rating = parseInt(product.average_rating);
-   
+    average_rating > 0 ? average_rating : average_rating = 0
+    
     return(
       <div className="product-show-page">
         

@@ -3,10 +3,10 @@ import StarRatings from 'react-star-ratings';
 
 const ReviewItem = (props) => (
   <div className="Review Item">
-    {props.review.user_id}
+    {props.review.username}
     <br/>
     <StarRatings
-      rating={ props.review.rating }
+      rating={ props.review.rating } 
       starRatedColor="black"
       numberOfStars={5}
     />

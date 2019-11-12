@@ -32,6 +32,8 @@ gem 'annotate', '~> 2.7.3'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pry-rails'
+gem 'aws-sdk-s3'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

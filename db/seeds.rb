@@ -6,10 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
 
 #Products climbing
 Product.create(name: 'CHIMERA', price: 210.0, description: "The pinnacle of rock shoe construction—specialized, meticulously crafted and refined to perform at the highest level.")
-Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
+
+test = Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
+
+file = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/booster_s.png")
+test.photo.attach(io: file, filename: 'booster_s.png')
+
 Product.create(name: 'DRAGO', price: 200.0, description: "Sensitive yet supportive, powerful yet precise— the superlative shoe for steep, demanding terrain. ")
 Product.create(name: 'FURIA S', price: 200.0, description: "A lace-up version of our revolutionary Drago. ")
 Product.create(name: 'FURIA AIR', price: 117.0, description: "Sensitivity redefined, a new second skin feeling featuring a cutting edge design at an incredibly low weight.")
