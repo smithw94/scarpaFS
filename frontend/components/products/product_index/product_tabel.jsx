@@ -6,7 +6,7 @@ class ProductTable extends React.Component {
   render() {
     let { filterText, products } = this.props;
     let rows = [];
-
+    
     products.forEach(product => {
       if (product.name.indexOf(filterText) === -1 ) return;
       rows.push(

@@ -19,50 +19,47 @@ class SidebarFilter extends React.Component {
   render() {
     return(
       <div>
-        Filter By Category
+        
         <form className="form-filter">
           <br/>
-          <label>Search
-            <br/>
-            <input 
+          <label>Search</label>
+          <input 
               type="text"
               value={this.props.filterText}
               onChange={this.handleFilterTextChange}
-            />
-          </label>
+          />
+
+          <br/>
+          Category
+          <br/>
+          <label>              
+          <input
+            type="checkbox" 
+            value={1}
+            onChange={this.handleFilterAttrChange}
+          />
+          Approach</label>
           <br/>
           <label>
-            <input
-              type="checkbox" 
-              value={1}
-              onChange={this.handleFilterAttrChange}
-            />
-            Approach
-          </label>
-          <br />
+          <input 
+            type="checkbox" 
+            value={2}
+            onChange={this.handleFilterAttrChange}
+          />
+          Climbing</label>
+          <br/>
           <label>
-            <input 
-              type="checkbox" 
-              value={2}
-              onChange={this.handleFilterAttrChange}
-            />
-            Climbing
-          </label>
-          <br />
+          <input type="checkbox" value="3"/>
+          Men's</label>
+          <br/>
           <label>
-            <input type="checkbox" value="3"/>
-            Men's
-          </label>
-          <br />
+          <input type="checkbox" value="4"/>
+          Women's</label>
+          <br/>
           <label>
-            <input type="checkbox" value="4"/>
-            Women's
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" value="5"/>
-            Youth
-          </label> 
+          <input type="checkbox" value="5"/>
+          Youth</label>
+           
         </form>
       </div>
     );

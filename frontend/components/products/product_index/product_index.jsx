@@ -49,21 +49,24 @@ class ProductIndex extends React.Component {
   render() {
     return(
       <div className="homePage">
-        <div className="index-filter">
-          <SidebarFilter 
-            filterText={this.state.filterText}
-            filterAttrs={this.state.filterAttrs}
-            onFilterTextChange={this.handleFilterTextChange}
-            onFilterAttrChange={this.handleFilterAttrChange}
-          />
+        <div className="index">
+          <div className="index-filter">
+            <SidebarFilter 
+              filterText={this.state.filterText}
+              filterAttrs={this.state.filterAttrs}
+              onFilterTextChange={this.handleFilterTextChange}
+              onFilterAttrChange={this.handleFilterAttrChange}
+            />
+          </div>
+
+          <div className="product-table-container">
+            <ProductTableContainer
+              filterAttrs={this.state.filterAttrs}
+              filterText={this.state.filterText}
+            />
+          </div>
         </div>
 
-        <div className="product-table-container">
-          <ProductTableContainer
-            filterAttrs={this.state.filterAttrs}
-            filterText={this.state.filterText}
-          />
-        </div>
 
         <Link className="home-link" to="/">Home</Link>
       </div>

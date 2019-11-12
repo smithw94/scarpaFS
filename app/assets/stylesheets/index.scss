@@ -1,3 +1,17 @@
+.index {
+  display: flex;
+  padding: 3% 5%;
+}
+
+.index-filter {
+  padding-right: 3%
+}
+
+.form-filter {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-list ul {
   display: flex;
   justify-content: space-around;
@@ -44,9 +58,21 @@
 }
 
 .product-list-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 20%;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.product-list-item:hover {
+  box-shadow: 0px 0px 8px 0px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .product-list-item p {

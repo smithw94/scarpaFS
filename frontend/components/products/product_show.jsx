@@ -55,7 +55,7 @@ class ProductShow extends React.Component {
         <div className="product-show">
           
           <div className="product-show-image">
-            <img className="showImage" src={`${product.photoUrl}`} />
+            <img className="index-image" src={`${product.photoUrl}`} />
           </div>
           
           <div className="product-show-info">
