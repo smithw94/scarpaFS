@@ -1,4 +1,5 @@
 json.extract!  product, :id, :name, :description, :price, :average_rating, :detail_ids, :review_ids
+json.photoUrl product.photo
 
 
 # json.details do
