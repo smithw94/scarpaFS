@@ -4,7 +4,8 @@ import { selectProductReviews } from '../../reducers/selectors';
 
 
 const mSTP = (state, ownProps) => {
-
+  let reviews = selectProductReviews(state.entities.reviews, ownProps.product)
+  debugger
   return {
     reviews: reviews
   }

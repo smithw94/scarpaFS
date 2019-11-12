@@ -49923,3 +49923,687 @@ Processing by Api::ReviewsController#create as JSON
 Completed 200 OK in 14ms (Views: 2.9ms | ActiveRecord: 5.5ms)
 
 
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:43:27 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.8ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.6ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.5ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  Rendered api/products/index.json.jbuilder (53.1ms)
+Completed 200 OK in 55ms (Views: 46.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-11 18:43:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 520ms (Views: 518.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:43:31 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.7ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.0ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.8ms)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (4.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/index.json.jbuilder (72.4ms)
+Completed 200 OK in 75ms (Views: 59.6ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-11 18:43:48 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:43:49 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.6ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (8.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.4ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.2ms)
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (6.2ms)
+  Rendered api/products/index.json.jbuilder (75.0ms)
+Completed 200 OK in 78ms (Views: 58.6ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-11 18:44:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 520ms (Views: 519.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:44:46 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.6ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.5ms)
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (5.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/index.json.jbuilder (81.0ms)
+Completed 200 OK in 84ms (Views: 69.1ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/api/reviews" for 127.0.0.1 at 2019-11-11 18:44:53 -0800
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"review"=>{"rating"=>"5", "body"=>"fdasdf", "product_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[36mReview Create (2.5ms)[0m  [1m[32mINSERT INTO "reviews" ("body", "rating", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "fdasdf"], ["rating", 5], ["product_id", 1], ["user_id", 1], ["created_at", "2019-11-12 02:44:53.578531"], ["updated_at", "2019-11-12 02:44:53.578531"]]
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:7
+  Rendering api/reviews/show.json.jbuilder
+  Rendered api/reviews/show.json.jbuilder (0.6ms)
+Completed 200 OK in 16ms (Views: 3.6ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/api/reviews" for 127.0.0.1 at 2019-11-11 18:45:08 -0800
+Processing by Api::ReviewsController#create as JSON
+  Parameters: {"review"=>{"rating"=>"5", "body"=>"syjstys", "product_id"=>"1"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("body", "rating", "product_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "syjstys"], ["rating", 5], ["product_id", 1], ["user_id", 1], ["created_at", "2019-11-12 02:45:08.527931"], ["updated_at", "2019-11-12 02:45:08.527931"]]
+  ↳ app/controllers/api/reviews_controller.rb:7
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/reviews_controller.rb:7
+  Rendering api/reviews/show.json.jbuilder
+  Rendered api/reviews/show.json.jbuilder (0.8ms)
+Completed 200 OK in 24ms (Views: 3.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/?size=%23&color=%23" for 127.0.0.1 at 2019-11-11 18:45:37 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"size"=>"#", "color"=>"#"}
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:45:38 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.9ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.7ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (6.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.2ms)
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (7.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  Rendered api/products/index.json.jbuilder (84.2ms)
+Completed 200 OK in 87ms (Views: 69.0ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:49:12 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.2ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.6ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (26.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  Rendered api/products/index.json.jbuilder (80.3ms)
+Completed 200 OK in 84ms (Views: 73.5ms | ActiveRecord: 8.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-11-11 18:51:46 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XqvSsUi318KxxYZmbCA-YA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2IAHhlv4mQPhGF3Cc8B5qw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2IAHhlv4mQPhGF3Cc8B5qw"], ["updated_at", "2019-11-12 02:51:46.256467"], ["id", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 20ms (Views: 4.0ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-11-11 18:51:52 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdfasdf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdfasdf"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+Completed 401 Unauthorized in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2019-11-11 18:51:59 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"asdfvasd", "password"=>"[FILTERED]", "first_name"=>"asdfas", "last_name"=>"asdfasd"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "40VhFOZP8mGBAVigagFqVA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asdfvasd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "asdfas"], ["last_name", "asdfasd"], ["email", "asdfvasd"], ["password_digest", "$2a$12$sVLkaok7wTvSLKmyFNB5G.MJiIzTuZz/HStRFEHug7M/gQwdFAZTK"], ["session_token", "40VhFOZP8mGBAVigagFqVA"], ["created_at", "2019-11-12 02:52:00.212121"], ["updated_at", "2019-11-12 02:52:00.212121"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JwQuRzTv567ozQ-ZHyNahQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdfvasd"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JwQuRzTv567ozQ-ZHyNahQ"], ["updated_at", "2019-11-12 02:52:00.220077"], ["id", 2]]
+  ↳ app/models/user.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.3ms)
+Completed 200 OK in 332ms (Views: 2.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 18:52:00 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (0.5ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (0.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  Rendered api/products/index.json.jbuilder (49.5ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 6.0ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-11-11 18:52:02 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JwQuRzTv567ozQ-ZHyNahQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MLKeQqwIGhWLlvimiP1_wA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:44
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "asdfvasd"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "MLKeQqwIGhWLlvimiP1_wA"], ["updated_at", "2019-11-12 02:52:02.468498"], ["id", 2]]
+  ↳ app/models/user.rb:44
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:44
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 19:00:29 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.0ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.5ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.3ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.8ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  Rendered api/products/index.json.jbuilder (51.2ms)
+Completed 200 OK in 53ms (Views: 43.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/?size=%23&color=%23" for 127.0.0.1 at 2019-11-11 19:00:34 -0800
+Processing by StaticPagesController#root as HTML
+  Parameters: {"size"=>"#", "color"=>"#"}
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 446ms (Views: 444.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/products" for 127.0.0.1 at 2019-11-11 19:00:35 -0800
+Processing by Api::ProductsController#index as JSON
+  Rendering api/products/index.json.jbuilder
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mProductAttribute Load (1.1ms)[0m  [1m[34mSELECT "product_attributes".* FROM "product_attributes" WHERE "product_attributes"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mAttribute Load (1.0ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes" WHERE "attributes"."id" IN ($1, $2)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)[0m  [["product_id", 1], ["product_id", 2], ["product_id", 3], ["product_id", 4], ["product_id", 5], ["product_id", 6], ["product_id", 7], ["product_id", 8], ["product_id", 9], ["product_id", 10], ["product_id", 11], ["product_id", 12], ["product_id", 13]]
+  ↳ app/views/api/products/index.json.jbuilder:1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 1]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.5ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 2]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 2]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 3]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 4]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 5]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 6]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.7ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 7]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.4ms)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (4.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 9]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 10]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.0ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 11]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (3.6ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "products"."id" FROM "products" INNER JOIN "product_attributes" ON "products"."id" = "product_attributes"."product_id" WHERE "product_attributes"."attribute_id" = $1[0m  [["attribute_id", 1]]
+  ↳ app/views/api/products/index.json.jbuilder:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 12]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (1.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 13]]
+  ↳ app/models/product.rb:25
+  Rendered api/products/_product.json.jbuilder (2.7ms)
+  Rendered api/products/index.json.jbuilder (110.4ms)
+Completed 200 OK in 113ms (Views: 97.2ms | ActiveRecord: 15.3ms)
+
+

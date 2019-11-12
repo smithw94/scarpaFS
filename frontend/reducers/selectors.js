@@ -40,7 +40,8 @@ export const selectProductReviews = (reviews, product) => {
       selectedReviews.push(reviews[review.id])
     }
   })
-  
+
   return selectedReviews;
 }
+
 

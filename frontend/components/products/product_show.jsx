@@ -29,6 +29,11 @@ class ProductShow extends React.Component {
       {}, this.state, { product_id: this.props.product.id }
     );
     this.props.createReview(reviewSubmit)
+
+    this.setState({
+      rating: 5,
+      body: ''
+    })
   }
 
   // componentDidUpdate(prevProps) {
