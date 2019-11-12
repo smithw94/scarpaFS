@@ -4,17 +4,15 @@ import { selectProductReviews } from '../../reducers/selectors';
 
 
 const mSTP = (state, ownProps) => {
+  let { users } = state.entities;
   let reviews = selectProductReviews(state.entities.reviews, ownProps.product)
-  debugger
+  
   return {
-    reviews: reviews
+    reviews: reviews,
+    users: Object.values(users)
   }
 }
 
-const mDTP = dispatch => {
-  return {
 
-  }
-}
 
-export default connect(mSTP, mDTP)(ReviewList);
+export default connect(mSTP)(ReviewList);

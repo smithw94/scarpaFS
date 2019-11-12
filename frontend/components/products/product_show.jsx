@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProductSizeSelection from './product_size_selection';
 import ReviewContainer from './review_container'
 import ReviewListContainer from './review_list_container';
+import StarRatings from 'react-star-ratings';
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -44,7 +45,8 @@ class ProductShow extends React.Component {
   
   render() {
     let { product, prodAttrs, reviews } = this.props;
-
+    let average_rating = parseInt(product.average_rating);
+    debugger
     return(
       <div className="product-show-page">
         
@@ -65,7 +67,13 @@ class ProductShow extends React.Component {
             </div>
 
             <div className="product-rating">
-              <h1>{product.average_rating}</h1>
+              <StarRatings
+                rating={average_rating}
+                starRatedColor="black"
+                numberOfStars={5}
+                starDimension="40px"
+                starSpacing="15px"
+              />
               <p>Reviews Add Your Review</p>
             </div>
             

@@ -8,7 +8,7 @@ class ReviewList extends React.Component {
 
 
   render() {
-    let { reviews } = this.props;
+    let { reviews, users } = this.props;
     let rows = [];
     reviews.forEach(review => (
       rows.push(
@@ -17,7 +17,6 @@ class ReviewList extends React.Component {
         />
       )
     ))
-
     return (
       <div>
         {rows}
