@@ -85,6 +85,9 @@
 
 .product-attrs-title {
   text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 22px;
 }
 
 
@@ -92,10 +95,11 @@
 .dropbtn {
   background-color: inherit;
   color: black;
-  padding: 16px;
-  font-size: 16px;
+  padding: 14px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
+  outline:none
 }
 
 /* Dropdown button on hover & focus */
@@ -136,4 +140,27 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
+}
+
+.star-ratings {
+  width: 100%
+}
+
+#rating {
+  width: 10%;
+  border: none;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }

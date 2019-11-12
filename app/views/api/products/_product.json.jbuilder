@@ -1,5 +1,8 @@
 json.extract!  product, :id, :name, :description, :price, :average_rating, :detail_ids, :review_ids
-json.photoUrl product.photo
+
+if product.photo
+  json.photoUrl url_for(product.photo)
+end 
 
 
 # json.details do

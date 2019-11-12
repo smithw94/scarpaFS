@@ -55,7 +55,7 @@ class ProductShow extends React.Component {
         <div className="product-show">
           
           <div className="product-show-image">
-            <img className="showImage" src={"https://i.imgur.com/5AQShJk.png"} />
+            <img className="showImage" src={`${product.photoUrl}`} />
           </div>
           
           <div className="product-show-info">
@@ -73,10 +73,9 @@ class ProductShow extends React.Component {
                 rating={average_rating}
                 starRatedColor="black"
                 numberOfStars={5}
-                starDimension="40px"
-                starSpacing="15px"
+                starDimension="25px"
+                starSpacing="10px"
               />
-              <p>Reviews Add Your Review</p>
             </div>
             
             <div className="product-show-description">
@@ -102,15 +101,20 @@ class ProductShow extends React.Component {
               }         
           </div>
         </div>
+        
+
 
         <div className="reviewsSection">
-          <h2>Reviews</h2>
+          
+          <h2 className="product-attrs-title">Reviews</h2>
           <div>
             <ReviewListContainer
               product={product}
             />
           </div>
-
+          { id !== 0 ? 
+          <div>
+            <h2 className="product-attrs-title">Leave a Review</h2>
           <ReviewContainer 
             id={product.id}
             rating={this.state.rating}
@@ -118,7 +122,10 @@ class ProductShow extends React.Component {
             onUpdate={this.update}
             onSubmit={this.handleSubmit}
           />
+          </div>
+            : <span>.</span> }
         </div>
+
 
         <div className="show-index-link">
           <Link to="/products">Back to products</Link>

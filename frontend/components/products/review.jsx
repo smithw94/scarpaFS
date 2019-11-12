@@ -23,30 +23,37 @@ class Review extends React.Component {
   render() {
     return (
       <div className="review-form">
-        {}
         <form onSubmit={this.handleSubmit}>
-          <label>Rating
+          <label>Rating (1-5)
             <input 
               type="number"
+              min="0"
+              max="5"
               value={this.props.rating}
               onChange={this.update("rating")}
+              id="rating"
             />
           </label>
-          <label>Username
+          <br/>
+          <label>Username</label>
+          <br/>
             <input 
+              required
               type="string"
               value={this.props.username}
               onChange={this.update("username")}
             />
-          </label>
           <br/>
-          <label>Review
+          <label>Review </label>
+          <br/>
             <textarea
+              required
+              cols="31"
               value={this.props.body}
               onChange={this.update("body")}
             />
-          </label>
-          <button type="submit">Add Review</button>
+          <br/>
+          <button className="session-submit" type="submit">Add Review</button>
         </form>
       </div>
     );
