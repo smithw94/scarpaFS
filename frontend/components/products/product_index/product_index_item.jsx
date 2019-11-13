@@ -1,25 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 import StarRatings from 'react-star-ratings';
 
-const ProductIndexItem = (props) => (
-  <div className={`product-list-item`}>
-      <div className="thumbnail-container">
-        <img className="thumbnail" src={`${props.product.photoUrl}`} />
+class ProductIndexItem extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    e.preventDefefault();
+
+  }
+
+
+  render () {
+    return (
+    <div>
+      <Link to={`/products/${this.props.product.id}`} style={{ textDecoration: 'none'}}>
+      <div className={`product-list-item`} >
+          <div className="thumbnail-container">
+            <img className="thumbnail" src={`${this.props.product.photoUrl}`} />
+          </div>
+          <div className="item-info">
+            {this.props.product.name}
+            <p>${this.props.product.price}0</p>
+            <StarRatings 
+              rating={parseInt(this.props.product.average_rating)}
+              starRatedColor="black"
+              numberOfStars={5}
+              starDimension="13px"
+              starSpacing="2px"
+            />
+          </div>
       </div>
-      <div className="item-info">
-        <Link to={`/products/${props.product.id}`}>{props.product.name}</Link>
-        <p>${props.product.price}0</p>
-        <br/>
-        <StarRatings 
-          rating={parseInt(props.product.average_rating)}
-          starRatedColor="black"
-          numberOfStars={5}
-          starDimension="13px"
-          starSpacing="2px"
-        />
-      </div>
-  </div>
+      </Link>
+    </div>
+
     );
+  }
+}
 
 export default ProductIndexItem;
