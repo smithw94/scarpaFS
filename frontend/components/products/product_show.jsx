@@ -17,7 +17,6 @@ class ProductShow extends React.Component {
       body: ''
     }
     
-
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleOnClick = this.handleOnClick.bind(this);
@@ -49,13 +48,15 @@ class ProductShow extends React.Component {
     }
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.reviews.length !== this.props.reviews.length) {
-  //     this.fetchProducts()
-  //   }
-  // }
+
+
+  componentDidMount() {
+    this.props.fetchProducts()
+  }
   
   render() {
+    if (!this.props.product) return null;
+
     let { product, prodAttrs, id } = this.props;
     let average_rating = parseInt(product.average_rating);
     average_rating > 0 ? average_rating : average_rating = 0
