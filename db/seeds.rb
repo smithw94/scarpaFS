@@ -11,5 +11,9 @@ require 'open-uri'
 #Products climbing
 test = Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
 
-file = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/booster_s.png")
-test.photo.attach(io: file, filename: 'booster_s.png')
+file = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s.png")
+test.photos.attach(io: file, filename: 'booster_s.png')
+file2 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s2.png")
+test.photos.attach(io: file2, filename: 'booster_s2.png')
+file3 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s3.png")
+test.photos.attach(io: file3, filename: 'booster_s2.png')

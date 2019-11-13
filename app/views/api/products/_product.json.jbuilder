@@ -1,9 +1,11 @@
 json.extract!  product, :id, :name, :description, :price, :average_rating, :detail_ids, :review_ids
 
-if product.photo
-  json.photoUrl url_for(product.photo)
-end 
+# if product.photo
+#   json.photoUrl url_for(product.photo)
+# end 
 
+
+json.photoUrls product.photos.map { |file| url_for(file) }
 
 # json.details do
 #   product.details.each do |detail|

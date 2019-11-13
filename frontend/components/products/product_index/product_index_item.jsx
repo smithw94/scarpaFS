@@ -22,13 +22,13 @@ class ProductIndexItem extends React.Component {
       <Link to={`/products/${this.props.product.id}`} style={{ textDecoration: 'none'}}>
       <div className={`product-list-item`} >
           <div className="thumbnail-container">
-            <img className="thumbnail" src={`${this.props.product.photoUrl}`} />
+            <img className="thumbnail" src={`${this.props.product.photoUrls[0]}`} />
           </div>
           <div className="item-info">
             {this.props.product.name}
             <p>${this.props.product.price}0</p>
             <StarRatings 
-              rating={parseInt(this.props.product.average_rating)}
+              rating={parseInt(this.props.product.average_rating) || 5 }
               starRatedColor="black"
               numberOfStars={5}
               starDimension="13px"

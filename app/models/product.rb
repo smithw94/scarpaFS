@@ -21,7 +21,7 @@ class Product < ApplicationRecord
 
   has_many :reviews
 
-  has_one_attached :photo
+  has_many_attached :photos
 
   def average_rating
     reviews.average(:rating)
