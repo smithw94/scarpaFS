@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SlideSet from './home_slideset';
 // import Logo from 'https://i.imgur.com/liak4zT.png';
 
 
@@ -18,9 +19,10 @@ class Home extends React.Component {
   render() {
 
   return (
-  <div className="homePage">
-    <div className="homePage1">
-      <img className="homePhoto1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
+  <div className="home-page">
+
+    <div className="home-page1">
+      <img className="home-photo1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
       <div className="inner-hP1">
         <div className="labels-hP1">
           <span>SCARPA</span>
@@ -34,11 +36,16 @@ class Home extends React.Component {
         </div>
       </div>npm 
     </div>
+
+    <div>
+      {/* <SlideSet /> */}
+    </div>
+
   </div>
+
   )
+
   }
-    
-  
 };
   
 

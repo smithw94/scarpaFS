@@ -46,9 +46,13 @@ class ProductIndex extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if (this.props.products.length === 0) this.props.fetchProducts()
+  }
+
   render() {
     return(
-      <div className="homePage">
+      <div className="home-page">
         <div className="index">
           <div className="index-filter">
             <SidebarFilter 

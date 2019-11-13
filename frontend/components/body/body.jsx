@@ -11,7 +11,7 @@ class Body extends React.Component {
           <h1>Fit Please</h1>
         </div>
         <div className="backgroundImg">
-          <img src={ window.homePage1 } alt="Background Img"/>
+          <img src={ window.home-page1 } alt="Background Img"/>
         </div>
       </div>
     );

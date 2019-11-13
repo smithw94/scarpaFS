@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.homePage {
+.home-page {
   // display: inline-block;
   // position: relative;
   // max-width: 100%;
@@ -16,17 +16,17 @@
   min-height: 100vh;
 }
 
-.homePage1 {
+.home-page1 {
   width: 100%;
   height: auto;
-  display: inline-block;
+  display: flex;
   position: relative;
   // overflow: hidden;
 
   color: #fff;
 }
 
-.homePhoto1 {
+.home-photo1 {
   z-index: -1;
   // position: absolute;
   width: 100%;
@@ -34,11 +34,18 @@
   display: block;
 }
 
-.homePage1b {
+.home-page1b {
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
   
+}
+
+.home-photo2{
+  max-width: 25%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 5px;
 }
 
 .inner-hP1 {
@@ -69,7 +76,7 @@
 }
 
 .product-nav {
-  padding: 10px 75px;
+  padding: 8px 75px;
   background-color: rgb(31, 29, 29);
 
   display: flex;
@@ -79,6 +86,7 @@
   
   width: 40%;
   height: 30px;
+  margin-bottom: 10px;
 }
 
 .product-nav a {
