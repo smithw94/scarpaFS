@@ -18,7 +18,7 @@ class ProductIndexItem extends React.Component {
 
   render () {
     return (
-    <div>
+    <div className="product-item">
       <Link to={`/products/${this.props.product.id}`} style={{ textDecoration: 'none'}}>
       <div className={`product-list-item`} >
           <div className="thumbnail-container">
@@ -28,7 +28,7 @@ class ProductIndexItem extends React.Component {
             {this.props.product.name}
             <p>${this.props.product.price}0</p>
             <StarRatings 
-              rating={parseInt(this.props.product.average_rating) || 5 }
+              rating={parseInt(this.props.product.average_rating) || 0 }
               starRatedColor="black"
               numberOfStars={5}
               starDimension="13px"

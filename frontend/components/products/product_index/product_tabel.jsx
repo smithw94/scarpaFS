@@ -19,7 +19,7 @@ class ProductTable extends React.Component {
 
 
     return (
-      <div>
+      <div className="product-table">
         {rows}
       </div>
     );

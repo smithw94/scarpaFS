@@ -58,16 +58,11 @@ class ProductIndex extends React.Component {
               onFilterAttrChange={this.handleFilterAttrChange}
             />
           </div>
-
-          <div className="product-table-container">
-            <ProductTableContainer
-              filterAttrs={this.state.filterAttrs}
-              filterText={this.state.filterText}
-            />
-          </div>
+          <ProductTableContainer
+            filterAttrs={this.state.filterAttrs}
+            filterText={this.state.filterText}
+          />          
         </div>
-
-
         <Link className="home-link" to="/">Home</Link>
       </div>
     )
