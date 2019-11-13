@@ -9,7 +9,9 @@ import StarRatings from 'react-star-ratings';
 class ProductShow extends React.Component {
   constructor(props) {
     super(props);
-
+    
+    this.myDivToFocus = React.createRef();
+  
     this.state = {
       rating: 5,
       body: ''
@@ -18,6 +20,7 @@ class ProductShow extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   update(field) {
@@ -36,6 +39,14 @@ class ProductShow extends React.Component {
       body: '',
       username: ''
     })
+  }
+
+  handleOnClick(e) {
+    if (this.myDivToFocus.current) {
+      this.myDivToFocus.current.scrollIntoView({
+        behavior: 'smooth'
+      })
+    }
   }
 
   // componentDidUpdate(prevProps) {
@@ -73,11 +84,16 @@ class ProductShow extends React.Component {
                 rating={average_rating}
                 starRatedColor="black"
                 numberOfStars={5}
-                starDimension="25px"
-                starSpacing="10px"
+                starDimension="15px"
+                starSpacing="2px"
               />
             </div>
             
+            <div onClick={this.handleOnClick}>
+              Reviews
+            </div>
+            
+
             <div className="product-show-description">
                 {product.description}
             </div>
@@ -106,8 +122,8 @@ class ProductShow extends React.Component {
 
         <div className="reviewsSection">
           
-          <h2 className="product-attrs-title">Reviews</h2>
-          <div>
+          <h2 className="product-attrs-title" ref={this.myDivToFocus}>Reviews</h2>
+          <div >
             <ReviewListContainer
               product={product}
             />
