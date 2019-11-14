@@ -23,7 +23,8 @@ const Greeting = ({ currentUser, logout }) => {
           <Link to="/login">MY ACCOUNT </Link> 
         }
         <Link to="/cart"> CART (0)</Link>
-        <Link to="/"><img src={ window.magni } className="search-icon"/></Link>
+        <a href="https://github.com/smithw94"><img src={window.magni} className="search-icon" /></a>
+        
       </div>
     </nav>
   );

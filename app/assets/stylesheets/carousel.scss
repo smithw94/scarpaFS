@@ -1,13 +1,14 @@
 .carousel {
   display: flex;
   justify-content: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .slideset {
   width: 80%;
   height: auto;
   display: flex;
-  color: rgb(165, 165, 165);
   justify-content: center;
   align-items: center;
 }
@@ -22,6 +23,7 @@
   cursor: pointer;
   font-size: 2rem;
   top: 50%;
+  padding: 1%
 }
 
 .slide-arrow.right {
@@ -36,4 +38,5 @@
   width: 100%;
   height: auto;
   padding-top: 5px;
+  border-radius: 20px;
 }

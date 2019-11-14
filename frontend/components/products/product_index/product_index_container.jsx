@@ -9,8 +9,9 @@ const mSTP = (state, ownProps) => {
   let { products, attributes } = state.entities;
   let productIds = [];
   let filter = parseInt(ownProps.location.search.split('?').filter(String));
-  // debugger
+  
   if (filter > 0) productIds = attributes[filter].product_ids;
+  // this still works!!!! ^^^^ attributes isn't seeded!!!
   
   productIds.length !== 0 ? products = selectProducts(products, productIds) : products
   

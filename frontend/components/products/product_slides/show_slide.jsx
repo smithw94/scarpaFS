@@ -28,7 +28,7 @@ class ShowSlide extends React.Component {
     const { currentImageIndex } = this.state;
     const shouldResetIndex = currentImageIndex === lastIndex;
     const index = shouldResetIndex ? 0 : currentImageIndex + 1;
-
+    
     this.setState({
       currentImageIndex: index
     });

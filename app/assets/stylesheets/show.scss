@@ -1,6 +1,6 @@
 .product-show-page {
   justify-content: center;
-  padding: 0 5%;
+  padding: 5% 5%;
   border-top: solid 1px gray;
   font-family: "FuturaPT-Medium", Helvetica, sans-serif;
   font-size: 13px;
@@ -16,7 +16,6 @@
 
 .product-show-image {
   width: 75%;
-  border-bottom: solid 1px gray;
 }
 
 .showImage {
@@ -90,6 +89,8 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   font-size: 22px;
+  border-top: 1px solid gray;
+  padding-top: 1%;
 }
 
 

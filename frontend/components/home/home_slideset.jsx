@@ -1,11 +1,11 @@
 import React from 'react';
 
 const imgUrls = [
+  "https://i.imgur.com/3iesvuH.jpg",
+  "https://i.imgur.com/QT35QLU.jpg",
   "https://i.imgur.com/N0IHCVM.jpg",
   "https://i.imgur.com/nOBv0lS.jpg",
-  "https://i.imgur.com/QT35QLU.jpg",
-  "https://i.imgur.com/O9cRUEZ.jpg",
-  "https://i.imgur.com/3iesvuH.jpg"
+  "https://i.imgur.com/O9cRUEZ.jpg"
 ];
 
 class SlideSet extends React.Component {
