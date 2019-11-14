@@ -9,6 +9,8 @@
 require 'open-uri'
 
 #Products climbing
+Product.delete_all
+
 test = Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
 file = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s.png")
 test.photos.attach(io: file, filename: 'booster_s.png')
@@ -52,12 +54,12 @@ file15 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/crux
 cruxw.photos.attach(io: file15, filename: 'crw3.png')
 
 drago = Product.create(name: "DRAGO", price: 200.0, description: "Aggressively downturned and highly asymmetric, with a forefoot wrapped in sticky rubber, the Drago represents the pinnacle of rock shoe construction—specialized, meticulously crafted and refined to perform at the highest level on demanding boulders and steep sport routes.")
-file16 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/dr.png")
-drago.photos.attach(io: file16, filename: 'dr.png')
-file17 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/dr2.png")
-drago.photos.attach(io: file17, filename: 'dr2.png')
-file18 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/dr3.png")
-drago.photos.attach(io: file18, filename: 'dr3.png')
+file16 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/drago.png")
+drago.photos.attach(io: file16, filename: 'drago.png')
+file17 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/drago2.png")
+drago.photos.attach(io: file17, filename: 'drago2.png')
+file18 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/drago/drago3.png")
+drago.photos.attach(io: file18, filename: 'drago3.png')
 
 furiaair = Product.create(name: "FURIA AIR", price: 200.0, description: "Sensitivity redefined, the new Furia Air brings a second skin feeling to a climbers foot, featuring a cutting edge design combined with the most advanced materials to create a climbing shoe that allows the foot to be fully engaged when climbing, at an incredibly low weight. The sensitivity and performance of the Furia Air must be experienced to be believed!")
 file19 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/furiaair/fa.png")
@@ -90,3 +92,74 @@ file29 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/geck
 geckow.photos.attach(io: file29, filename: 'gew2.png')
 file30 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/geckow/gew3.png")
 geckow.photos.attach(io: file30, filename: 'gew3.png')
+
+helix = Product.create(name: "HELIX", price: 190.0, description: "Comfortable, durable and undeniably classic, the flat-lasted Helix combines elemental yet refined features to yield one of our most popular shoes. With a highly adjustable lace-up construction, padded tongue and relatively symmetrical profile, the Helix is perfect for guides, advancing climbers and anyone prioritizing all-day comfort.")
+file31 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helix/he.png")
+helix.photos.attach(io: file31, filename: 'he.png')
+file32 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helix/he2.png")
+helix.photos.attach(io: file32, filename: 'he2.png')
+file33 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helix/he3.png")
+helix.photos.attach(io: file33, filename: 'he3.png')
+
+helixw = Product.create(name: "HELIX WOMEN'S", price: 190.0, description: "Comfortable, durable and undeniably classic, the flat-lasted Helix combines elemental yet refined features to yield one of our most popular shoes. With a highly adjustable lace-up construction, padded tongue and relatively symmetrical profile, the Helix is perfect for guides, advancing climbers and anyone prioritizing all-day comfort.")
+file34 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helixw/hew.png")
+helixw.photos.attach(io: file34, filename: 'hew.png')
+file35 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helixw/hew2.png")
+helixw.photos.attach(io: file35, filename: 'hew2.png')
+file36 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/helixw/hew3.png")
+helixw.photos.attach(io: file36, filename: 'hew3.png')
+
+instinct = Product.create(name: "INSTICT", price: 190.0, description: "With a curved, asymmetric last, highly adjustable lace-up design and a chiseled low-profile toe for added precision in pockets and on restrictive footholds, the Instinct is the most supportive shoe in the Instinct family that excels across a variety of styles and disciplines.")
+file34 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinct/in.png")
+instinct.photos.attach(io: file34, filename: 'in.png')
+file35 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinct/in2.png")
+instinct.photos.attach(io: file35, filename: 'in2.png')
+file36 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinct/in3.png")
+instinct.photos.attach(io: file36, filename: 'in3.png')
+
+instinctvs = Product.create(name: "INSTICT VS", price: 200.0, description: "Combining a curved, asymmetrical last with a slightly softer construction and thinner sole for enhanced flexibility and sensitivity, the Instinct VS is the cornerstone of our Performance line—an all-around shoe that handles a variety of styles at the highest level.")
+file37 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvs/iv.png")
+instinctvs.photos.attach(io: file37, filename: 'iv.png')
+file38 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvs/iv2.png")
+instinctvs.photos.attach(io: file38, filename: 'iv2.png')
+file39 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvs/iv3.png")
+instinctvs.photos.attach(io: file39, filename: 'iv3.png')
+
+instinctvsw = Product.create(name: "INSTICT VS WOMEN'S", price: 200.0, description: "Combining a curved, asymmetrical last with a slightly softer construction and thinner sole for enhanced flexibility and sensitivity, the Instinct VS is the cornerstone of our Performance line—an all-around shoe that handles a variety of styles at the highest level.")
+file40 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvsw/ivw.png")
+instinctvsw.photos.attach(io: file40, filename: 'ivw.png')
+file41 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvsw/ivw2.png")
+instinctvsw.photos.attach(io: file41, filename: 'ivw2.png')
+file42 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/instinctvsw/ivw3.png")
+instinctvsw.photos.attach(io: file42, filename: 'ivw3.png')
+
+mescal = Product.create(name: "Mescalito Mid GTX", price: 170.0, description: "A souped-up version of our all-new Mescalito that adds a taller cuff and GORE-TEX for increased support and protection on rugged alpine approaches, the Mescalito Mid GTX is our premier approach shoe for serious mountain missions.")
+file43 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/mescal/me.png")
+mescal.photos.attach(io: file43, filename: 'me.png')
+file44 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/mescal/me2.png")
+mescal.photos.attach(io: file44, filename: 'me2.png')
+file45 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/mescal/me3.png")
+mescal.photos.attach(io: file45, filename: 'me3.png')
+
+mescalw = Product.create(name: "Mescalito Mid GTX WOMEN'S", price: 170.0, description: "A souped-up version of our all-new Mescalito that adds a taller cuff and GORE-TEX for increased support and protection on rugged alpine approaches, the Mescalito Mid GTX is our premier approach shoe for serious mountain missions.")
+file46 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/mescalw/mew.png")
+mescalw.photos.attach(io: file46, filename: 'mew.png')
+file47 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/mescalw/mew2.png")
+mescalw.photos.attach(io: file47, filename: 'mew2.png')
+
+vaporvw = Product.create(name: "VAPOR V", price: 180.0, description: "A percise, versatile and best-selling shoe that marries a comfortable fit with steep climbing performance, the redesigned Vapor V features fresh colors, a microfiber upper and our Bi-Tension™ active rand for a premium combo of durability and sensitivity.")
+file48 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporvw/vaw.png")
+vaporvw.photos.attach(io: file48, filename: 'vaw.png')
+file49 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporvw/vvw2.png")
+vaporvw.photos.attach(io: file49, filename: 'vvw2.png')
+file50 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporvw/vvw3.png")
+vaporvw.photos.attach(io: file50, filename: 'vvw3.png')
+
+
+vaporw = Product.create(name: "VAPOR", price: 170.0, description: "Our most supportive lace-up, the Vapor is a technical trad shoe that provides serious stability and plush comfort, whether you’re jamming cracks or out on the face. The Vapor’s stiff platform features minimal stitching to increase comfort and eliminate hotspots.")
+file51 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporw/vw.png")
+vaporw.photos.attach(io: file51, filename: 'vw.png')
+file52 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporw/vw2.png")
+vaporw.photos.attach(io: file52, filename: 'vw2.png')
+file53 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/vaporw/vw3.png")
+vaporw.photos.attach(io: file53, filename: 'vw3.png')
