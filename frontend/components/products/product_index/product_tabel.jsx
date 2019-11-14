@@ -5,10 +5,11 @@ import ProductIndexItem from './product_index_item';
 class ProductTable extends React.Component {
   render() {
     let { filterText, products } = this.props;
+    let search = filterText.toUpperCase();
     let rows = [];
     
     products.forEach(product => {
-      if (product.name.indexOf(filterText) === -1 ) return;
+      if (product.name.indexOf(search) === -1 ) return;
       rows.push(
         <ProductIndexItem
           product={product}

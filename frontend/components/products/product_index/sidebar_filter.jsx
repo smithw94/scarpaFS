@@ -49,15 +49,15 @@ class SidebarFilter extends React.Component {
           Climbing</label>
           <br/>
           <label>
-          <input type="checkbox" value="3"/>
+            <input type="checkbox" value={3} onChange={this.handleFilterAttrChange}/>
           Men's</label>
           <br/>
           <label>
-          <input type="checkbox" value="4"/>
+            <input type="checkbox" value={4} onChange={this.handleFilterAttrChange}/>
           Women's</label>
           <br/>
           <label>
-          <input type="checkbox" value="5"/>
+            <input type="checkbox" value={5} onChange={this.handleFilterAttrChange}/>
           Youth</label>
            
         </form>

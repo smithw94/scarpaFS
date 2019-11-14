@@ -1,28 +1,87 @@
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-// import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+
+const imgUrls = [
+  "https://i.imgur.com/N0IHCVM.jpg",
+  "https://i.imgur.com/nOBv0lS.jpg",
+  "https://i.imgur.com/QT35QLU.jpg",
+  "https://i.imgur.com/O9cRUEZ.jpg",
+  "https://i.imgur.com/3iesvuH.jpg"
+];
 
 class SlideSet extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { 
+      currentImageIndex: 0
+    };
+
+    this.nextSlide = this.nextSlide.bind(this);
+    this.previousSlide = this.previousSlide.bind(this);
+  }
+
+  previousSlide() {
+    const lastIndex = imgUrls.length - 1;
+    const { currentImageIndex } = this.state;
+    const shouldResetIndex = currentImageIndex === 0;
+    const index = shouldResetIndex ? lastIndex : currentImageIndex - 1;
+
+    this.setState({
+      currentImageIndex: index
+    });
+  }
+
+  nextSlide() {
+    const lastIndex = imgUrls.length - 1;
+    const { currentImageIndex } = this.state;
+    const shouldResetIndex = currentImageIndex === lastIndex;
+    const index = shouldResetIndex ? 0 : currentImageIndex + 1;
+
+    this.setState({
+      currentImageIndex: index
+    });
+  }
+
   render() {
 
     return (
-      <Carousel>
-        <div className="home-page1">
-          <img className="home-photo2" src={"https://i.imgur.com/N0IHCVM.jpg"}/>
-        </div>
-        <div className="home-page1">
-          <img className="home-photo2" src={"https://i.imgur.com/nOBv0lS.jpg"} />
-        </div>
-        <div className="home-page1">
-          <img className="home-photo2" src={"https://i.imgur.com/QT35QLU.jpg"} />
-        </div>
-        <div className="home-page1">
-          <img className="home-photo2" src={"https://i.imgur.com/O9cRUEZ.jpg"} />
-        </div>
-      </Carousel>
-    )
+      <div className="slideset">
+        <Arrow 
+          direction="left"
+          clickFunction={ this.previousSlide }
+          glyph="&#9664;"
+        />
+
+        <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
+
+        <Arrow
+          direction="right"
+          clickFunction={this.nextSlide}
+          glyph="&#9654;"
+        />
+      </div>
+    );
   }
 }
+
+const ImageSlide = ({ url }) => {
+
+  return (
+    <div className="image-slide" >
+      <img className="home-photo2" src={`${url}`} alt=""/>
+    </div>
+  )
+}
+
+const Arrow = ({ direction, clickFunction, glyph }) => (
+  <div
+    className={`slide-arrow ${direction}`}
+    onClick={clickFunction}
+  >
+    {glyph}
+  </div>
+)
+
 
 
 

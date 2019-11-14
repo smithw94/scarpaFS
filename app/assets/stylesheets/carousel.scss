@@ -1,0 +1,39 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.slideset {
+  width: 80%;
+  height: auto;
+  display: flex;
+  color: rgb(165, 165, 165);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slide {
+  height: 100%;
+  width: 100%;
+  transition: background-image .3s ease-in-out;
+}
+
+.slide-arrow {
+  cursor: pointer;
+  font-size: 2rem;
+  top: 50%;
+}
+
+.slide-arrow.right {
+  right: 1rem;
+}
+
+.slide-arrow.left {
+  left: 1rem;
+}
+
+.home-photo2 {
+  width: 100%;
+  height: auto;
+  padding-top: 5px;
+}
