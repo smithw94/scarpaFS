@@ -14,13 +14,35 @@ export const selectProductAttrs = (attributes, product) => {
 
 export const selectProductIds = (attributes, attrIds) => {
   let productIds = [];
+
   
-  attrIds.forEach(id => (
-    attributes[id].product_ids.forEach(prodId => (
-      !productIds.includes(prodId) ? productIds.push(prodId) : null
-    ))
-  ))
-  return productIds;
+  if (attrIds.length === 0 ) {
+
+    return productIds
+  
+  } else if (attrIds.length === 1) {
+    productIds = attributes[attrIds[0]].product_ids
+    
+    return productIds
+  
+  } else {
+    let count = {};
+    let temp;
+    attrIds.forEach(attrId => {
+      temp = attributes[attrId].product_ids;
+      productIds = productIds.concat(temp);
+    })
+
+    productIds.forEach(id => {
+      count[id] = count[id] || 0;
+      count[id] += 1;
+      return count;
+    })
+
+    const ans = Object.keys(count).filter(id => count[id] > (attrIds.length - 1));
+    
+    return ans;
+  }
 }
 
 export const selectProducts = (products, productIds) => {

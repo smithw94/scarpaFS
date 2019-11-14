@@ -12,7 +12,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
 
       <div className="nav-center">
-        <Link to="/">SHOP</Link>
+        <Link to="/products">SHOP</Link>
         <Link to="/"> COMMUNITY </Link>
         <Link to="/"> SUPPORT</Link>
       </div>

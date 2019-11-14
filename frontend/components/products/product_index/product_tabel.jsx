@@ -4,7 +4,6 @@ import ProductIndexItem from './product_index_item';
 
 class ProductTable extends React.Component {
   render() {
-    // filterText should still be present
     let { filterText, products } = this.props;
 
     let search = filterText.toUpperCase();
