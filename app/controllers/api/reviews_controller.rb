@@ -4,11 +4,8 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = current_user.reviews.new(review_params)
 
-    if @review.save
-      render :show
-    else
-      redirect_to "/#/products"
-    end
+    @review.save
+    render :show
   end
 
   private

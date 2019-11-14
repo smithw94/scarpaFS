@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProductSizeSelection from './product_size_selection';
 import ReviewContainer from './review_container'
 import ReviewListContainer from './review_list_container';
+import ShowSlideContainer from './product_slides/show_slide_container';
 import StarRatings from 'react-star-ratings';
 
 class ProductShow extends React.Component {
@@ -14,6 +15,7 @@ class ProductShow extends React.Component {
   
     this.state = {
       rating: 5,
+      username: '',
       body: ''
     }
     
@@ -35,8 +37,8 @@ class ProductShow extends React.Component {
 
     this.setState({
       rating: 5,
-      body: '',
-      username: ''
+      username: '',
+      body: ''
     })
   }
 
@@ -47,8 +49,6 @@ class ProductShow extends React.Component {
       })
     }
   }
-
-
 
   componentDidMount() {
     this.props.fetchProducts()
@@ -66,8 +66,12 @@ class ProductShow extends React.Component {
         
         <div className="product-show">
           
-          <div className="product-show-image">
+          {/* <div className="product-show-image">
             <img className="index-image" src={`${product.photoUrls[0]}`} />
+          </div> */}
+
+          <div className="product-show-image">
+            <ShowSlideContainer photos={product.photoUrls}/>
           </div>
           
           <div className="product-show-info">

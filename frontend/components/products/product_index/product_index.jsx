@@ -65,6 +65,7 @@ class ProductIndex extends React.Component {
           <ProductTableContainer
             filterAttrs={this.state.filterAttrs}
             filterText={this.state.filterText}
+            filter={this.props.filter}
           />          
         </div>
         <Link className="home-link" to="/">Home</Link>

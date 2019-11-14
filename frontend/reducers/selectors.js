@@ -14,6 +14,7 @@ export const selectProductAttrs = (attributes, product) => {
 
 export const selectProductIds = (attributes, attrIds) => {
   let productIds = [];
+  
   attrIds.forEach(id => (
     attributes[id].product_ids.forEach(prodId => (
       !productIds.includes(prodId) ? productIds.push(prodId) : null
