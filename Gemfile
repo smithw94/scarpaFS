@@ -33,6 +33,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'aws-sdk-s3'
+gem 'rails_12factor'
 
 
 # Use ActiveStorage variant
