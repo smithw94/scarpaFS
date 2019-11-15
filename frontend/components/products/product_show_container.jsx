@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../actions/product_actions';
-import { fetchAttribute } from '../../actions/attribute_actions';
+// import { fetchAttribute } from '../../actions/attribute_actions';
 import { selectProductAttrs, selectProductReviews } from '../../reducers/selectors';
 import { createReview } from '../../actions/review_actions';
 

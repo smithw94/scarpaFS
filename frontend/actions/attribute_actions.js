@@ -19,5 +19,5 @@ const receiveAttribute = attribute => ({
 // export const fetchAttributes = () => dispatch => APIProduct.fetchPayload()
 //   .then(payload => dispatch(receiveAllAttributes(payload)));
 
-export const fetchAttribute = attrId => dispatch => APIAttr.fetchAttr(attrId)
-  .then(attribute => dispatch(receiveAttribute(attribute)));
+// export const fetchAttribute = attrId => dispatch => APIAttr.fetchAttr(attrId)
+//   .then(attribute => dispatch(receiveAttribute(attribute)));
