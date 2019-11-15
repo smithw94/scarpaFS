@@ -8,9 +8,9 @@
 
 require 'open-uri'
 
+ProductAttribute.delete_all
 Product.delete_all
 Attribute.delete_all
-ProductAttribute.delete_all
 
 #Products climbing
 # 1
