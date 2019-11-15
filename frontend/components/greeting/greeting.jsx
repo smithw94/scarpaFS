@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout }) => {
           <Link to="/login">MY ACCOUNT </Link> 
         }
         <Link to="/cart"> CART (0)</Link>
-        {/* <a href="https://github.com/smithw94"><img src={window.github} className="search-icon" /></a> */}
+        <a href="https://github.com/smithw94"><img src={window.github} className="search-icon" /></a>
         
       </div>
     </nav>
