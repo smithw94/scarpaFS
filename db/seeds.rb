@@ -14,13 +14,13 @@ Attribute.delete_all
 
 #Products climbing
 # 1
-test = Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
+booster = Product.create(name: 'BOOSTER S', price: 190.0, description: "Building on the original Furia, the versatile and sensitive Furia S has a redesigned heel and closure for a glove-like fit")
 file = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s.png")
-test.photos.attach(io: file, filename: 'booster_s.png')
+booster.photos.attach(io: file, filename: 'booster_s.png')
 file2 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s2.png")
-test.photos.attach(io: file2, filename: 'booster_s2.png')
+booster.photos.attach(io: file2, filename: 'booster_s2.png')
 file3 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boosterS/booster_s3.png")
-test.photos.attach(io: file3, filename: 'booster_s3.png')
+booster.photos.attach(io: file3, filename: 'booster_s3.png')
 # 2
 boost = Product.create(name: 'BOOSTIC', price: 200.0, description: "The most supportive shoe in our specialized performance category, the Boostic offers maximum edging capabilities for technical, footwork-intensive routes. The Boostic’s construction ensures the foot is held firmly in place and remains stable on small holds and difficult frontpoint-style climbing.")
 file4 = open("https://active-storage-scrapa-dev.s3-us-west-1.amazonaws.com/boostic/bo.png")
@@ -178,45 +178,45 @@ vaporw.photos.attach(io: file53, filename: 'vw3.png')
 
 # Best Use
 # 1
-Attribute.create(attribute_name: "BEST USE", attribute_value: "Approach")
+approach = Attribute.create(attribute_name: "BEST USE", attribute_value: "Approach")
 # 2
-Attribute.create(attribute_name: "BEST USE", attribute_value: "Bouldering")
+bouldering = Attribute.create(attribute_name: "BEST USE", attribute_value: "Bouldering")
 # 3
-Attribute.create(attribute_name: "BEST USE", attribute_value: "Competition")
+competition = Attribute.create(attribute_name: "BEST USE", attribute_value: "Competition")
 # 4
-Attribute.create(attribute_name: "BEST USE", attribute_value: "Trad")
+trad = Attribute.create(attribute_name: "BEST USE", attribute_value: "Trad")
 
 # Category
 # 5
-Attribute.create(attribute_name: "CATEGORY", attribute_value: "Men's")
+mens = Attribute.create(attribute_name: "CATEGORY", attribute_value: "Men's")
 # 6
-Attribute.create(attribute_name: "CATEGORY", attribute_value: "Women's")
+womens = Attribute.create(attribute_name: "CATEGORY", attribute_value: "Women's")
 # 7
-Attribute.create(attribute_name: "CATEGORY", attribute_value: "Youth")
+youth = Attribute.create(attribute_name: "CATEGORY", attribute_value: "Youth")
 
 # Closure
 # 8
-Attribute.create(attribute_name: "CLOSURE", attribute_value: "Lace")
+lace = Attribute.create(attribute_name: "CLOSURE", attribute_value: "Lace")
 # 9
-Attribute.create(attribute_name: "CLOSURE", attribute_value: "Slipper")
+slipper = Attribute.create(attribute_name: "CLOSURE", attribute_value: "Slipper")
 # 10
-Attribute.create(attribute_name: "CLOSURE", attribute_value: "Strap")
+strap = Attribute.create(attribute_name: "CLOSURE", attribute_value: "Strap")
 
 # Primary Material
 # 11
-Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Leather")
+leather = Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Leather")
 # 12
-Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Leather & Synthetic")
+las = Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Leather & Synthetic")
 # 13
-Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Synthetic")
+synthetic = Attribute.create(attribute_name: "PRIMARY MATERIAL", attribute_value: "Synthetic")
 
 # Sole Rubber
 # 14
-Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "SCRAPA Vision™")
+vision = Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "SCRAPA Vision™")
 # 15
-Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "Vibram® XS Edge")
+xsedge = Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "Vibram® XS Edge")
 # 16
-Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "Vibram® XS Grip2")
+grip2 = Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "Vibram® XS Grip2")
 
 
 # PR
@@ -236,107 +236,107 @@ Attribute.create(attribute_name: "SOLE RUBBER", attribute_value: "Vibram® XS Gr
 #        TE
 
 # MENS
-ProductAttribute.create(product_id: 1, attribute_id: 5)
-ProductAttribute.create(product_id: 2, attribute_id: 5)
-ProductAttribute.create(product_id: 3, attribute_id: 5)
-ProductAttribute.create(product_id: 4, attribute_id: 5)
-ProductAttribute.create(product_id: 6, attribute_id: 5)
-ProductAttribute.create(product_id: 7, attribute_id: 5)
-ProductAttribute.create(product_id: 8, attribute_id: 5)
-ProductAttribute.create(product_id: 9, attribute_id: 5)
-ProductAttribute.create(product_id: 11, attribute_id: 5)
-ProductAttribute.create(product_id: 13, attribute_id: 5)
-ProductAttribute.create(product_id: 14, attribute_id: 5)
-ProductAttribute.create(product_id: 16, attribute_id: 5)
-ProductAttribute.create(product_id: 18, attribute_id: 5)
-ProductAttribute.create(product_id: 19, attribute_id: 5)
+ProductAttribute.create(product_id: booster.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: boost.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: chimera.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: crux.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: drago.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: furiaair.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: furias.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: gecko.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: helix.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: instinctvs.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: mescal.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: vapor.id, attribute_id: mens.id)
 
 # WOMENS
-ProductAttribute.create(product_id: 5, attribute_id: 6)
-ProductAttribute.create(product_id: 10, attribute_id: 6)
-ProductAttribute.create(product_id: 12, attribute_id: 6)
-ProductAttribute.create(product_id: 15, attribute_id: 6)
-ProductAttribute.create(product_id: 17, attribute_id: 6)
-ProductAttribute.create(product_id: 18, attribute_id: 6)
-ProductAttribute.create(product_id: 19, attribute_id: 6)
+ProductAttribute.create(product_id: cruxw.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: geckow.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: helixw.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: instinctvsw.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: mescalw.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: vapor.id, attribute_id: womens.id)
 
 # APPROACH
-ProductAttribute.create(product_id: 4, attribute_id: 1)
-ProductAttribute.create(product_id: 5, attribute_id: 1)
-ProductAttribute.create(product_id: 9, attribute_id: 1)
-ProductAttribute.create(product_id: 10, attribute_id: 1)
-ProductAttribute.create(product_id: 16, attribute_id: 1)
-ProductAttribute.create(product_id: 17, attribute_id: 1)
+ProductAttribute.create(product_id: crux.id, attribute_id: approach.id)
+ProductAttribute.create(product_id: cruxw.id, attribute_id: approach.id)
+ProductAttribute.create(product_id: gecko.id, attribute_id: approach.id)
+ProductAttribute.create(product_id: geckow.id, attribute_id: approach.id)
+ProductAttribute.create(product_id: mescal.id, attribute_id: approach.id)
+ProductAttribute.create(product_id: mescalw.id, attribute_id: approach.id)
 
 # BOULDERING
-ProductAttribute.create(product_id: 1, attribute_id: 2)
-ProductAttribute.create(product_id: 2, attribute_id: 2)
-ProductAttribute.create(product_id: 3, attribute_id: 2)
-ProductAttribute.create(product_id: 6, attribute_id: 2)
-ProductAttribute.create(product_id: 7, attribute_id: 2)
-ProductAttribute.create(product_id: 8, attribute_id: 2)
-ProductAttribute.create(product_id: 13, attribute_id: 2)
-ProductAttribute.create(product_id: 14, attribute_id: 2)
-ProductAttribute.create(product_id: 15, attribute_id: 2)
-ProductAttribute.create(product_id: 18, attribute_id: 2)
+ProductAttribute.create(product_id: booster.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: boost.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: chimera.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: drago.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: furiaair.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: furias.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: instinctvs.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: instinctvsw.id, attribute_id: bouldering.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: bouldering.id)
 
 # COMPETITION
-ProductAttribute.create(product_id: 1, attribute_id: 3)
-ProductAttribute.create(product_id: 2, attribute_id: 3)
-ProductAttribute.create(product_id: 6, attribute_id: 3)
-ProductAttribute.create(product_id: 7, attribute_id: 3)
+ProductAttribute.create(product_id: booster.id, attribute_id: competition.id)
+ProductAttribute.create(product_id: boost.id, attribute_id: competition.id)
+ProductAttribute.create(product_id: drago.id, attribute_id: competition.id)
+ProductAttribute.create(product_id: furiaair.id, attribute_id: competition.id)
 
 # TRAD
-ProductAttribute.create(product_id: 11, attribute_id: 4)
-ProductAttribute.create(product_id: 12, attribute_id: 4)
-ProductAttribute.create(product_id: 13, attribute_id: 4)
+ProductAttribute.create(product_id: helix.id, attribute_id: trad.id)
+ProductAttribute.create(product_id: helixw.id, attribute_id: trad.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: trad.id)
 
 # CLOSURE
-ProductAttribute.create(product_id: 3, attribute_id: 8)
-ProductAttribute.create(product_id: 11, attribute_id: 8)
-ProductAttribute.create(product_id: 12, attribute_id: 8)
-ProductAttribute.create(product_id: 13, attribute_id: 8)
-ProductAttribute.create(product_id: 19, attribute_id: 8)
+ProductAttribute.create(product_id: chimera.id, attribute_id: lace.id)
+ProductAttribute.create(product_id: helix.id, attribute_id: lace.id)
+ProductAttribute.create(product_id: helixw.id, attribute_id: lace.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: lace.id)
+ProductAttribute.create(product_id: vapor.id, attribute_id: lace.id)
 
 # LEATHER
-ProductAttribute.create(product_id: 4, attribute_id: 11)
-ProductAttribute.create(product_id: 5, attribute_id: 11)
-ProductAttribute.create(product_id: 9, attribute_id: 11)
-ProductAttribute.create(product_id: 10, attribute_id: 11)
-ProductAttribute.create(product_id: 11, attribute_id: 11)
-ProductAttribute.create(product_id: 12, attribute_id: 11)
-ProductAttribute.create(product_id: 16, attribute_id: 11)
-ProductAttribute.create(product_id: 17, attribute_id: 11)
+ProductAttribute.create(product_id: crux.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: cruxw.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: gecko.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: geckow.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: helix.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: helixw.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: mescal.id, attribute_id: leather.id)
+ProductAttribute.create(product_id: mescalw.id, attribute_id: leather.id)
 
 # LEATHER & SYNTHETIC
-ProductAttribute.create(product_id: 18, attribute_id: 12)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: las.id)
 
 # SYNTHETIC
-ProductAttribute.create(product_id: 1, attribute_id: 13)
-ProductAttribute.create(product_id: 3, attribute_id: 13)
-ProductAttribute.create(product_id: 6, attribute_id: 13)
-ProductAttribute.create(product_id: 7, attribute_id: 13)
-ProductAttribute.create(product_id: 8, attribute_id: 13)
-ProductAttribute.create(product_id: 13, attribute_id: 13)
-ProductAttribute.create(product_id: 14, attribute_id: 13)
-ProductAttribute.create(product_id: 18, attribute_id: 13)
-ProductAttribute.create(product_id: 19, attribute_id: 13)
+ProductAttribute.create(product_id: booster.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: chimera.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: drago.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: furiaair.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: furias.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: instinctvs.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: vapor.id, attribute_id: synthetic.id)
 
 # XS EDGE
-ProductAttribute.create(product_id: 2, attribute_id: 15)
-ProductAttribute.create(product_id: 11, attribute_id: 15)
-ProductAttribute.create(product_id: 12, attribute_id: 15)
-ProductAttribute.create(product_id: 13, attribute_id: 15)
-ProductAttribute.create(product_id: 14, attribute_id: 15)
-ProductAttribute.create(product_id: 18, attribute_id: 15)
-ProductAttribute.create(product_id: 19, attribute_id: 15)
+ProductAttribute.create(product_id: boost.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: helix.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: helixw.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: instinct.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: instinctvs.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: vapor.id, attribute_id: xsedge.id)
 
 # XS GRIP2
-ProductAttribute.create(product_id: 1, attribute_id: 16)
-ProductAttribute.create(product_id: 3, attribute_id: 16)
-ProductAttribute.create(product_id: 6, attribute_id: 16)
-ProductAttribute.create(product_id: 7, attribute_id: 16)
-ProductAttribute.create(product_id: 8, attribute_id: 16)
-ProductAttribute.create(product_id: 14, attribute_id: 16)
-ProductAttribute.create(product_id: 15, attribute_id: 16)
-ProductAttribute.create(product_id: 18, attribute_id: 16)
+ProductAttribute.create(product_id: booster.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: chimera.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: drago.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: furiaair.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: furias.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: instinctvs.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: instinctvsw.id, attribute_id: grip2.id)
+ProductAttribute.create(product_id: vaporvw.id, attribute_id: grip2.id)
