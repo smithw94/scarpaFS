@@ -249,7 +249,7 @@ ProductAttribute.create(product_id: instinct.id, attribute_id: mens.id)
 ProductAttribute.create(product_id: instinctvs.id, attribute_id: mens.id)
 ProductAttribute.create(product_id: mescal.id, attribute_id: mens.id)
 ProductAttribute.create(product_id: vaporvw.id, attribute_id: mens.id)
-ProductAttribute.create(product_id: vapor.id, attribute_id: mens.id)
+ProductAttribute.create(product_id: vaporw.id, attribute_id: mens.id)
 
 # WOMENS
 ProductAttribute.create(product_id: cruxw.id, attribute_id: womens.id)
@@ -258,7 +258,7 @@ ProductAttribute.create(product_id: helixw.id, attribute_id: womens.id)
 ProductAttribute.create(product_id: instinctvsw.id, attribute_id: womens.id)
 ProductAttribute.create(product_id: mescalw.id, attribute_id: womens.id)
 ProductAttribute.create(product_id: vaporvw.id, attribute_id: womens.id)
-ProductAttribute.create(product_id: vapor.id, attribute_id: womens.id)
+ProductAttribute.create(product_id: vaporw.id, attribute_id: womens.id)
 
 # APPROACH
 ProductAttribute.create(product_id: crux.id, attribute_id: approach.id)
@@ -296,7 +296,7 @@ ProductAttribute.create(product_id: chimera.id, attribute_id: lace.id)
 ProductAttribute.create(product_id: helix.id, attribute_id: lace.id)
 ProductAttribute.create(product_id: helixw.id, attribute_id: lace.id)
 ProductAttribute.create(product_id: instinct.id, attribute_id: lace.id)
-ProductAttribute.create(product_id: vapor.id, attribute_id: lace.id)
+ProductAttribute.create(product_id: vaporw.id, attribute_id: lace.id)
 
 # LEATHER
 ProductAttribute.create(product_id: crux.id, attribute_id: leather.id)
@@ -320,7 +320,7 @@ ProductAttribute.create(product_id: furias.id, attribute_id: synthetic.id)
 ProductAttribute.create(product_id: instinct.id, attribute_id: synthetic.id)
 ProductAttribute.create(product_id: instinctvs.id, attribute_id: synthetic.id)
 ProductAttribute.create(product_id: vaporvw.id, attribute_id: synthetic.id)
-ProductAttribute.create(product_id: vapor.id, attribute_id: synthetic.id)
+ProductAttribute.create(product_id: vaporw.id, attribute_id: synthetic.id)
 
 # XS EDGE
 ProductAttribute.create(product_id: boost.id, attribute_id: xsedge.id)
@@ -329,7 +329,7 @@ ProductAttribute.create(product_id: helixw.id, attribute_id: xsedge.id)
 ProductAttribute.create(product_id: instinct.id, attribute_id: xsedge.id)
 ProductAttribute.create(product_id: instinctvs.id, attribute_id: xsedge.id)
 ProductAttribute.create(product_id: vaporvw.id, attribute_id: xsedge.id)
-ProductAttribute.create(product_id: vapor.id, attribute_id: xsedge.id)
+ProductAttribute.create(product_id: vaporw.id, attribute_id: xsedge.id)
 
 # XS GRIP2
 ProductAttribute.create(product_id: booster.id, attribute_id: grip2.id)
