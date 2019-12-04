@@ -8,7 +8,7 @@ const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="nav">
       <div className="nav-left">
-        <Link to="/"><img src={ window.logo } className="nav-logo-img"/></Link>
+        <Link to="/"><img src='/logo.png' className="nav-logo-img"/></Link>
       </div>
 
       <div className="nav-center">
@@ -23,7 +23,7 @@ const Greeting = ({ currentUser, logout }) => {
           <Link to="/login">MY ACCOUNT </Link> 
         }
         <Link to="/cart"> CART (0)</Link>
-        <a href="https://github.com/smithw94"><img src={window.github} className="search-icon" /></a>
+        <a className="gitlink" href="https://github.com/smithw94"><img src={'/github.png'} className="search-icon" /></a>
         
       </div>
     </nav>
