@@ -1,12 +1,13 @@
 .carousel {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 15px;
 }
 
 .slideset {
-  width: 80%;
+  width: 75%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -14,16 +15,19 @@
 }
 
 .image-slide {
-  height: 100%;
   width: 100%;
-  transition: background-image .3s ease-in-out;
+  height: auto;
+  display: flex;
+  position: relative;
+  color: #fff;
 }
 
 .slide-arrow {
   cursor: pointer;
   font-size: 2rem;
   top: 50%;
-  padding: 1%
+  padding: 1%;
+  color: grey;
 }
 
 .slide-arrow.right {
@@ -35,8 +39,29 @@
 }
 
 .home-photo2 {
+  z-index: -1;
   width: 100%;
   height: auto;
-  padding-top: 5px;
-  border-radius: 20px;
+  display: block;
+}
+
+.inner-hp2 {
+  position: absolute;
+  bottom: 0;
+  margin-left: 45%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width:50%;
+}
+
+.small-title {
+  font-size: 38px;
+  letter-spacing: 3px;
+  line-height: 40px;
+}
+
+.small-description {
+  letter-spacing: 1px;
 }

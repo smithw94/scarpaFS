@@ -1,11 +1,9 @@
 import React from 'react';
 
 const imgUrls = [
-  "https://i.imgur.com/3iesvuH.jpg",
-  "https://i.imgur.com/QT35QLU.jpg",
-  "https://i.imgur.com/N0IHCVM.jpg",
-  "https://i.imgur.com/nOBv0lS.jpg",
-  "https://i.imgur.com/O9cRUEZ.jpg"
+  "https://i.imgur.com/WriL8qd.jpg",
+  "https://i.imgur.com/tHtL5uX.jpg",
+  "https://i.imgur.com/Upt7pWW.jpg"
 ];
 
 class SlideSet extends React.Component {
@@ -42,6 +40,47 @@ class SlideSet extends React.Component {
     });
   }
 
+  imageText() {
+    if (this.state.currentImageIndex === 0) {
+      return (
+      <div className="inner-hp2">
+        <h1 className="small-title">
+          INSTINCT SERIES
+        </h1>
+        <p className="small-description">
+          A collection of all-around climbing shoes that excel across a variety of technical styles and disciplines at the highest level.
+        </p>
+        <button className="session-submit">Shop Now</button>
+      </div>
+      )
+    } else if (this.state.currentImageIndex === 1) {
+      return( 
+      <div className="inner-hp2">
+        <h1 className="small-title">
+          ALL DAY PERFORMANCE
+        </h1>
+        <p className="small-description">
+          These flat-lasted shoes strike the perfect balance between all-day comfort and performance.
+        </p>
+        <button className="session-submit">Shop Now</button>
+      </div>
+      )
+    } else {
+      return (
+      <div className="inner-hp2">
+        <h1 className="small-title">
+          APPROACH
+        </h1>
+        <p className="small-description">
+          Sometimes getting to and from the route is half the battle. 
+          The tough and functional models in our Approach collection will inspire climb-worthy confidence before and after the rope comes out.
+        </p>
+        <button className="session-submit">Shop Now</button>
+      </div>
+      )
+    }
+  }
+
   render() {
 
     return (
@@ -52,7 +91,7 @@ class SlideSet extends React.Component {
           glyph="&#9664;"
         />
 
-        <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
+        <ImageSlide url={ imgUrls[this.state.currentImageIndex] } text = {this.imageText()} />
 
         <Arrow
           direction="right"
@@ -64,11 +103,12 @@ class SlideSet extends React.Component {
   }
 }
 
-const ImageSlide = ({ url }) => {
+const ImageSlide = ({ url, text }) => {
 
   return (
     <div className="image-slide" >
       <img className="home-photo2" src={`${url}`} alt=""/>
+          {text}
     </div>
   )
 }
