@@ -36,6 +36,7 @@
 
 .slide-arrow.left {
   left: 1rem;
+  padding-right: 10px;
 }
 
 .home-photo2 {
@@ -64,4 +65,10 @@
 
 .small-description {
   letter-spacing: 1px;
+}
+
+.button-link {
+  text-decoration: none;
+  // margin-top: none !important;
+  padding-top: 15px !important;
 }

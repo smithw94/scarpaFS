@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SlideSet from './home_slideset';
-// import Logo from 'https://i.imgur.com/liak4zT.png';
-
-
 
 class Home extends React.Component {
-  
   constructor(props) {
     super(props);
   }
@@ -14,38 +10,30 @@ class Home extends React.Component {
   componentDidMount() {
     this.props.fetchProducts() 
   }
-
   
   render() {
+    return (
+    <div className="home-page">
+      <div className="home-page1">
+        <img className="home-photo1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
+        <div className="inner-hP1">
+          <div className="labels-hP1">
+            <span>SCRAPA</span>
+            <h1>ROCK CLIMBING</h1>
+          </div>
+          <div className="product-nav">
+            <Link to="/products" >Shop all</Link>
+            <Link to="/products/?34" >Bouldering</Link>
+            <Link to="/products/?33">Approach</Link>
+          </div>
+        </div>npm 
+      </div>
 
-  return (
-  <div className="home-page">
-
-    <div className="home-page1">
-      <img className="home-photo1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
-      <div className="inner-hP1">
-        <div className="labels-hP1">
-          <span>SCRAPA</span>
-          
-          <h1>ROCK CLIMBING</h1>
-        </div>
-        <div className="product-nav">
-          <Link to="/products" >Shop all</Link>
-          <Link to="/products/?2" >Rock Shoes</Link>
-          <Link to="/products/?1">Approach</Link>
-        </div>
-      </div>npm 
+      <div className="carousel">
+        <SlideSet />
+      </div>
     </div>
-
-    <div className="carousel">
-      <SlideSet />
-    </div>
-
-  </div>
-
-  )
-
-  }
+  )}
 };
   
 
