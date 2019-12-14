@@ -1,25 +1,21 @@
-# README
+# [Scarpa](https://scrapa-climbing.herokuapp.com/#/)
+Inspired by Scarpa Climbing Company.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Background and Overview
 
-* Ruby version
+Fullstack Clone with user-authentication using BCrypt, search and filter functionality, reviews section, and product ratings.
 
-* System dependencies
+## Technologies
 
-* Configuration
+Backend: Ruby / Rails
 
-* Database creation
+Frontend: React / Redux
 
-* Database initialization
+Amazon Web Service, PostgreSQL
 
-* How to run the test suite
+## Features
 
-* Services (job queues, cache servers, search engines, etc.)
+## Primary Components
 
-* Deployment instructions
-
-* ...
-# scarpa
+## Future Plans
