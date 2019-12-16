@@ -1,6 +1,8 @@
 # [Scarpa](https://scrapa-climbing.herokuapp.com/#/)
 Inspired by Scarpa Climbing Company.
 
+![](public/frontpage.gif)
+
 
 ## Background and Overview
 
@@ -14,8 +16,9 @@ Frontend: React / Redux
 
 Amazon Web Service, PostgreSQL
 
-## Features
-
 ## Primary Components
+Product description, ratings, reviews, and attributes listed on show page:
+![](public/carousel.gif)
 
-## Future Plans
+Images hosted on AWS:
+![](public/show.jpg)
