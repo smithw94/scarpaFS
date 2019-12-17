@@ -91,6 +91,7 @@
   font-size: 22px;
   border-top: 1px solid gray;
   padding-top: 1%;
+  padding-bottom: 30px;
 }
 
 
@@ -172,4 +173,13 @@ input[type=number] {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.review-link {
+  padding: 10px 0;
+  font-weight: 800;
+}
+
+.review-link:hover {
+  cursor: pointer;
 }

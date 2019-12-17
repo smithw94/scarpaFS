@@ -94,7 +94,7 @@ class ProductShow extends React.Component {
               />
             </div>
             
-            <div onClick={this.handleOnClick}>
+            <div className="review-link" onClick={this.handleOnClick}>
               Reviews
             </div>
             

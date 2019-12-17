@@ -24,7 +24,7 @@ class ReviewItem extends React.Component {
           starRatedColor="black"
           numberOfStars={5}
           starDimension="13px"
-          starSpacing="5px"
+          starSpacing="2px"
         />
         <br/>
         {this.props.review.body}
