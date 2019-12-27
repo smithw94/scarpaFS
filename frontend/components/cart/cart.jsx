@@ -13,6 +13,13 @@ class Cart extends React.Component {
     this.props.removeFromCart(e.target.value)
   }
 
+  subTotal() {
+    let total = 0;
+    let { cart } = this.props;
+    cart.map(product => total += parseInt(product.price));
+    return total;
+  }
+
   render() {
     if (!this.props.cart) return null;
     let { cart } = this.props;
@@ -35,6 +42,9 @@ class Cart extends React.Component {
             <button value={i} type="submit" onClick={this.handleClick} className="session-submit">Remove</button>
           </div>
         ))}
+        <div className="subtotal">
+          Subtotal: ${this.subTotal()}.00
+        </div>
       </div>
     )
   }

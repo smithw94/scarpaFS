@@ -13,8 +13,9 @@ const Greeting = ({ currentUser, logout, cartLength }) => {
 
       <div className="nav-center">
         <Link to="/products">SHOP</Link>
-        <Link to="/"> COMMUNITY </Link>
-        <Link to="/"> SUPPORT</Link>
+        <Link to="https://github.com/smithw94"> GITHUB </Link>
+        <Link to="https://www.linkedin.com/in/will-smith-0a958b198/"> LINKEDIN</Link>
+        
       </div>
 
       <div className="nav-right">
@@ -23,14 +24,11 @@ const Greeting = ({ currentUser, logout, cartLength }) => {
           <Link to="/login">MY ACCOUNT </Link> 
         }
           <Link to="/cart"> CART ({cartLength})</Link>
-        <a className="gitlink" href="https://github.com/smithw94"><img src={'/github.png'} className="search-icon" /></a>
-        
       </div>
     </nav>
   );
 
   return sessionLinks();
 };
-
 
 export default Greeting;
