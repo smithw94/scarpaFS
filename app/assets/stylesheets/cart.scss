@@ -1,0 +1,16 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.cart-item {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thumb {
+  width: 15%;
+}

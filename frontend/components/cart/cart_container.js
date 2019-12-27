@@ -1,13 +1,15 @@
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import Cart from './cart';
+import { connect } from 'react-redux';
+import { removeFromCart } from '../../actions/cart_actions';
+import Cart from './cart';
 
-// const mSTP = state => ({
-  
-// })
+const mSTP = state => {
+  return {
+    cart: state.entities.cart
+  }
+}
 
-// const mDTP = dispatch => ({
+const mDTP = dispatch => ({
+ removeFromCart: index => dispatch(removeFromCart(index))
+});
 
-// });
-
-// export default connect(mSTP, mDTP)(Cart);
+export default connect(mSTP, mDTP)(Cart);

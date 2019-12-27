@@ -100,7 +100,10 @@ class ProductShow extends React.Component {
 
             <div className="product-button-selections">
                 <ProductSizeSelection 
-                  productId = {product.id}
+                  name = {product.name}
+                  id = {product.id}
+                  price = {product.price}
+                  pic = {product.photoUrls[0]}
                   addItem = {this.props.addItem}
                 />
             </div>

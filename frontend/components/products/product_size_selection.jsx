@@ -7,7 +7,10 @@ class ProductSizeSelection extends React.Component {
     this.handleClick = this.handleClick.bind(this);
 
     this.state ={
-      id: this.props.productId,
+      name: this.props.name,
+      id: this.props.id,
+      price: this.props.price,
+      pic: this.props.pic,
       size: null
     }
   }
@@ -25,7 +28,13 @@ class ProductSizeSelection extends React.Component {
         errors: 'Please select a size'
       })
     }
-    this.props.addItem({id: this.state.id, size: this.state.size});
+    this.props.addItem({
+      name: this.state.name, 
+      price: this.state.price,
+      size: this.state.size,
+      pic: this.state.pic,
+      id: this.state.id
+    });
     this.setState({
       errors: ''
     })
@@ -44,14 +53,6 @@ class ProductSizeSelection extends React.Component {
             <option value="42">42</option>
           </select>
         </label>
-        {/* <label>COLOR:
-          <select name="color" className="dropbtn">
-            <option value="#">Orange</option>
-            <option value="#">Red</option>
-            <option value="#">Blue</option>
-            <option value="#">Green</option>
-          </select>
-        </label> */}
         <br/>
         {this.state.errors}
         <button type="submit" onClick={this.handleClick} className="session-submit">Add to Cart</button>
