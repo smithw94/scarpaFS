@@ -1,21 +1,12 @@
-import {
-  connect
-} from 'react-redux';
-
-import {
-  logout
-} from '../../actions/session_actions';
-
+import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
 import Greeting from './greeting';
 
-const mapStateToProps = ({
-  session,
-  entities: {
-    users
-  }
-}) => {
+const mapStateToProps = ({session, entities: { users, cart } }) => {
+  let cartLength = cart.length
   return {
-    currentUser: users[session.id]
+    currentUser: users[session.id],
+    cartLength
   };
 };
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout }) => {
+const Greeting = ({ currentUser, logout, cartLength }) => {
   const sessionLinks = () => (
     <nav className="nav">
       <div className="nav-left">
@@ -22,7 +22,7 @@ const Greeting = ({ currentUser, logout }) => {
           currentUser ? <Link to="/" onClick={logout}>Log Out</Link> : 
           <Link to="/login">MY ACCOUNT </Link> 
         }
-        <Link to="/cart"> CART (0)</Link>
+          <Link to="/cart"> CART ({cartLength})</Link>
         <a className="gitlink" href="https://github.com/smithw94"><img src={'/github.png'} className="search-icon" /></a>
         
       </div>

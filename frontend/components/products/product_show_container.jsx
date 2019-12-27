@@ -3,6 +3,7 @@ import { fetchProducts } from '../../actions/product_actions';
 // import { fetchAttribute } from '../../actions/attribute_actions';
 import { selectProductAttrs, selectProductReviews } from '../../reducers/selectors';
 import { createReview } from '../../actions/review_actions';
+import { addToCart } from '../../actions/cart_actions'
 
 import ProductShow from './product_show';
 
@@ -31,7 +32,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
   return {
     createReview: review => dispatch(createReview(review)),
-    fetchProducts: () => dispatch(fetchProducts())
+    fetchProducts: () => dispatch(fetchProducts()),
+    addItem: (id) => dispatch(addToCart(id))
   }
 }
 

@@ -65,10 +65,6 @@ class ProductShow extends React.Component {
       <div className="product-show-page">
         
         <div className="product-show">
-          
-          {/* <div className="product-show-image">
-            <img className="index-image" src={`${product.photoUrls[0]}`} />
-          </div> */}
 
           <div className="product-show-image">
             <ShowSlideContainer photos={product.photoUrls}/>
@@ -97,16 +93,17 @@ class ProductShow extends React.Component {
             <div className="review-link" onClick={this.handleOnClick}>
               Reviews
             </div>
-            
 
             <div className="product-show-description">
                 {product.description}
             </div>
 
             <div className="product-button-selections">
-                <ProductSizeSelection />
+                <ProductSizeSelection 
+                  productId = {product.id}
+                  addItem = {this.props.addItem}
+                />
             </div>
-
           </div>
         </div>
 
@@ -122,8 +119,6 @@ class ProductShow extends React.Component {
               }         
           </div>
         </div>
-        
-
 
         <div className="reviewsSection">
           

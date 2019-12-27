@@ -7,13 +7,15 @@ import productsReducer from "./product_reducer";
 import attributesReducer from "./attributes_reducer";
 import prodAttrReducer from "./prod_attr_reducer";
 import reviewsReducer from "./reviews_reducer";
+import cartReducer from "./cart_reducer";
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
   products: productsReducer,
   attributes: attributesReducer,
   prodAttr: prodAttrReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
+  cart: cartReducer
 });
 
 export default entitiesReducer;
