@@ -15,6 +15,7 @@ Amazon Web Service, PostgreSQL
 
 ## Primary Components
 Cart functionality allows users to save products and return to them another time.
+![](public/filter.gif)
 
 Lookup specific products by name, or filter products by attributes in the sidenav.
 
