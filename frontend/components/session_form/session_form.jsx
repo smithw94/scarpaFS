@@ -77,17 +77,9 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <div className="dummy">
-                <input type="checkbox"></input>
-                <label>Remember Me</label> 
-                <span>What's this?</span>
-            </div>
             <button className="session-submit" type="submit"> Sign In</button>
           </div>
-          <Link className="forgotPw" to="/signup">Forgot Your Password?</Link>
         </form>
-          
-
         <div className="new-customer-box">
           <h3>New Customers</h3>
           <p>

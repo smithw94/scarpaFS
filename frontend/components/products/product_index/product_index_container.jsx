@@ -11,9 +11,8 @@ const mSTP = (state, ownProps) => {
   let filter = parseInt(ownProps.location.search.split('?').filter(String));
   
   if (filter > 0) productIds = attributes[filter].product_ids;
-  // this still works!!!! ^^^^ attributes isn't seeded!!!
   
-  productIds.length !== 0 ? products = selectProducts(products, productIds) : products
+  products = productIds.length !== 0 ? selectProducts(products, productIds) : {'hi' : 'No items fount :('}
   
   return {
     products: Object.values(products),
