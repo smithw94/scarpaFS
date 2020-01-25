@@ -13,8 +13,8 @@ const Greeting = ({ currentUser, logout, cartLength }) => {
 
       <div className="nav-center">
         <Link to="/products">SHOP</Link>
-        <Link to="https://github.com/smithw94"> GITHUB </Link>
-        <Link to="https://www.linkedin.com/in/will-smith-0a958b198/"> LINKEDIN</Link>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/smithw94"> GITHUB </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/will-smith-0a958b198/"> LINKEDIN</a>
         
       </div>
 
