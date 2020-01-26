@@ -36,7 +36,7 @@ class ProductSizeSelection extends React.Component {
       id: this.state.id
     });
     this.setState({
-      errors: ''
+      errors: 'Added to cart!'
     })
   }
 
@@ -44,17 +44,22 @@ class ProductSizeSelection extends React.Component {
   return (
     <div>
       <form>
-        <label>SIZE:
+        <label>
           <select required name="size" className="dropbtn" onChange={this.update()}>
-            <option selected disabled>Choose here</option>
+            <option selected disabled>Sizes (EU)</option>
             <option value="45">45</option>
             <option value="44">44</option>
             <option value="43">43</option>
             <option value="42">42</option>
+            <option value="41">41</option>
+            <option value="40">40</option>
+            <option value="39">39</option>
+            <option value="38">38</option>
           </select>
         </label>
         <br/>
         {this.state.errors}
+        <br/>
         <button type="submit" onClick={this.handleClick} className="session-submit">Add to Cart</button>
       </form>
     </div>
