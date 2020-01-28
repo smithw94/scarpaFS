@@ -17,8 +17,6 @@ class ProductIndex extends React.Component {
     this.handleFilterAttrChange = this.handleFilterAttrChange.bind(this)
   }
 
-
-
   handleFilterTextChange(filterText) {
     this.setState({
       filterText: filterText

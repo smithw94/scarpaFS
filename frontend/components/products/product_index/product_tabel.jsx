@@ -5,7 +5,6 @@ import ProductIndexItem from './product_index_item';
 class ProductTable extends React.Component {
   render() {
     let { filterText, products } = this.props;
-
     let search = filterText.toUpperCase();
     let rows = [];
     
@@ -18,8 +17,6 @@ class ProductTable extends React.Component {
         />
       ) 
     })
-
-
     return (
       <div className="product-table">
         {rows}

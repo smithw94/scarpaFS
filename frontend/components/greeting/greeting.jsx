@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -14,8 +13,7 @@ const Greeting = ({ currentUser, logout, cartLength }) => {
       <div className="nav-center">
         <Link to="/products">SHOP</Link>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/smithw94"> GITHUB </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/will-smith-0a958b198/"> LINKEDIN</a>
-        
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/will-smith-0a958b198/"> LINKEDIN</a> 
       </div>
 
       <div className="nav-right">

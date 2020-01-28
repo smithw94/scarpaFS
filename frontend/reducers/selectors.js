@@ -1,7 +1,3 @@
-// export const selectProduct = ( { products }, productId) => (
-//   products[productId]
-// );
-
 export const selectProductAttrs = (attributes, product) => {
   let details = product.detail_ids;
   let productAttr = [];

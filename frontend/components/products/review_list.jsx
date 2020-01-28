@@ -8,7 +8,7 @@ class ReviewList extends React.Component {
 
 
   render() {
-    let { reviews, deleteReview, users } = this.props;
+    let { reviews, deleteReview } = this.props;
     let rows = [];
     reviews.forEach(review => (
       rows.push(

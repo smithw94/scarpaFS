@@ -63,15 +63,12 @@ class ProductShow extends React.Component {
     
     return(
       <div className="product-show-page">
-        
         <div className="product-show">
-
           <div className="product-show-image">
             <ShowSlideContainer photos={product.photoUrls}/>
           </div>
           
           <div className="product-show-info">
-            
             <div className="product-show-name">
               <h3>{product.name}</h3>
             </div>
@@ -124,7 +121,6 @@ class ProductShow extends React.Component {
         </div>
 
         <div className="reviewsSection">
-          
           <h2 className="product-attrs-title" ref={this.myDivToFocus}>Reviews</h2>
           <div >
             <ReviewListContainer
@@ -149,7 +145,6 @@ class ProductShow extends React.Component {
         <div className="show-index-link">
           <Link to="/products">Back to products</Link>
         </div>
-      
       </div>
     );
   }

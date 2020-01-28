@@ -1,4 +1,3 @@
-// import { RECEIVE_ATTRIBUTE } from '../actions/attribute_actions';
 import { RECEIVE_PRODUCTS, RECEIVE_PRODUCT } from '../actions/product_actions';
 
 const attributesReducer = ( state = {}, action) => {
