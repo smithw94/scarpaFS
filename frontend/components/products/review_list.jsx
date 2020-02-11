@@ -20,7 +20,10 @@ class ReviewList extends React.Component {
       )
     ))
     return (
-      <div>
+      <div>    
+        {rows.length > 0 ?     
+        <h2 className="product-attrs-title" ref={this.myDivToFocus}>Reviews</h2>
+        : ""}
         {rows}
       </div>
     );

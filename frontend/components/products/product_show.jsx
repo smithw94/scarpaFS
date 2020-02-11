@@ -15,7 +15,6 @@ class ProductShow extends React.Component {
   
     this.state = {
       rating: 5,
-      username: '',
       body: ''
     }
     
@@ -30,14 +29,15 @@ class ProductShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     let reviewSubmit = Object.assign(
-      {}, this.state, { product_id: this.props.product.id }
+      {}, this.state, { product_id: this.props.product.id, username: this.props.username }
     );
     this.props.createReview(reviewSubmit)
 
     this.setState({
       rating: 5,
-      username: '',
+      username: this.props.username,
       body: ''
     })
   }
@@ -113,15 +113,15 @@ class ProductShow extends React.Component {
           </div>
           <div className="product-show-attrs">
               {
-                prodAttrs.map(attr => (
-                  <div className="product-show-attr"> {attr.attribute_name}: {attr.attribute_value}</div>
+                prodAttrs.map((attr, i) => (
+                  <div key={i} className="product-show-attr"> {attr.attribute_name}: {attr.attribute_value}</div>
                 ))
               }         
           </div>
         </div>
 
         <div className="reviewsSection">
-          <h2 className="product-attrs-title" ref={this.myDivToFocus}>Reviews</h2>
+          
           <div >
             <ReviewListContainer
               product={product}

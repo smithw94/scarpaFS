@@ -21,37 +21,46 @@ class Review extends React.Component {
 
   render() {
     return (
-      <div className="review-form">
-        <form onSubmit={this.handleSubmit}>
-          <label>Rating (1-5)
-            <input 
-              type="number"
-              min="0"
-              max="5"
-              value={this.props.rating}
-              onChange={this.update("rating")}
-              id="rating"
-            />
-          </label>
-          <br/>
-          <label>Username</label>
-          <br/>
-            <input 
-              required
-              type="string"
-              value={this.props.username}
-              onChange={this.update("username")}
-            />
-          <br/>
+      <div >
+        <form className="review-form" onSubmit={this.handleSubmit}>
+            <tr>
+              <td>
+                5
+                <input type="radio" id="5" name="drone" value="5"
+                onChange={this.update("rating")}/> 
+              </td>
+              <td>
+                4
+                <input type="radio" id="4" name="drone" value="4"
+                  onChange={this.update("rating")}/>
+                  
+              </td>             
+              <td>
+                3
+                <input type="radio" id="3" name="drone" value="3"
+                  onChange={this.update("rating")}/>
+                  
+              </td>             
+              <td>
+                2
+                <input type="radio" id="2" name="drone" value="2"
+                  onChange={this.update("rating")}/>
+                  
+              </td>             
+              <td>
+                1
+                <input type="radio" id="1" name="drone" value="1"
+                  onChange={this.update("rating")}/>
+              </td>             
+            </tr>
           <label>Review </label>
-          <br/>
             <textarea
+              id="reviewBox"
               required
               cols="31"
               value={this.props.body}
               onChange={this.update("body")}
             />
-          <br/>
           <button className="session-submit" type="submit">Add Review</button>
         </form>
       </div>

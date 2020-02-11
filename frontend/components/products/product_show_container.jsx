@@ -10,17 +10,22 @@ const mSTP = (state, ownProps) => {
   let { products, attributes, reviews } = state.entities;
   let { id } = state.session;
   id > 0 ? id : id = 0
+  
+  let username;
+  if (id > 0) {
+    username = state.entities.users[id].first_name
+  }
 
   let productId = ownProps.match.params.id;
   const product = products[productId];
   if (!product) return {};
   reviews = selectProductReviews(reviews, product);
-
   return {
     product,
     prodAttrs: selectProductAttrs(attributes, product),
     reviews,
-    id
+    id,
+    username
   }
 };
 
