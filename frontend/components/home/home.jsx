@@ -18,7 +18,7 @@ class Home extends React.Component {
         <img className="home-photo1" src={"https://i.imgur.com/liak4zT.png"} alt="asdfasdf"/>
         <div className="inner-hP1">
           <div className="labels-hP1">
-            <span>SCRAPA</span>
+            <span>SCARPA</span>
             <h1>ROCK CLIMBING</h1>
           </div>
           <div className="product-nav">

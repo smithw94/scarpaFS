@@ -8,6 +8,7 @@ import ProductIndexContainer from './products/product_index/product_index_contai
 import HomeContainer from './home/home_container';
 import ProductShowContainer from './products/product_show_container';
 import CartContainer from './cart/cart_container';
+import Footer from './greeting/footer';
 
 
 
@@ -27,6 +28,10 @@ const App = () => (
       <Route exact path="/cart" component={CartContainer}/>
       <Route exact path="/" component={HomeContainer} />
     </Switch>
+
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 
