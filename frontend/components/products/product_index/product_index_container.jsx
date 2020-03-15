@@ -13,7 +13,6 @@ const mSTP = (state, ownProps) => {
   if (filter > 0) productIds = attributes[filter].product_ids;
   
   products = productIds.length !== 0 ? selectProducts(products, productIds) : {'hi' : 'No items fount :('}
-  
   return {
     products: Object.values(products),
     attributes: Object.values(attributes),

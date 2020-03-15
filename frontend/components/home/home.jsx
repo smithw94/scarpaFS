@@ -26,12 +26,12 @@ class Home extends React.Component {
             <Link to="/products/?34" >Bouldering</Link>
             <Link to="/products/?33">Approach</Link>
           </div>
-        </div>npm 
+        </div>
       </div>
 
-      <div className="carousel">
+      {/* <div className="carousel">
         <SlideSet />
-      </div>
+      </div> */}
     </div>
   )}
 };

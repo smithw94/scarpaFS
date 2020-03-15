@@ -18,8 +18,8 @@ const Greeting = ({ currentUser, logout, cartLength }) => {
         {
           currentUser ? <Link to="/" onClick={logout}>Log Out</Link> : 
           <Link to="/login">MY ACCOUNT </Link> 
-        }
-          <Link to="/cart"> CART ({cartLength})</Link>
+        }      
+         <Link to="/cart"> CART ({cartLength})</Link>         
       </div>
     </nav>
   );

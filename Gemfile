@@ -34,6 +34,7 @@ gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'aws-sdk-s3'
 gem 'rails_12factor'
+gem 'stripe'
 
 
 # Use ActiveStorage variant

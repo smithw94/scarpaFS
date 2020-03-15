@@ -20,8 +20,20 @@ class Cart extends React.Component {
     return total;
   }
 
-  render() {
-    if (!this.props.cart) return null;
+  displayNone() {
+    return (
+      <div>
+        <div className="empty-cart">
+          Your cart is empty!
+        </div>
+        <div className="empty-cart">
+          <Link to={`/products`}>Return to shop</Link>
+        </div>
+      </div>
+    )
+  }
+
+  displayItems() {
     let { cart } = this.props;
     return(
       <div className="cart-container">
@@ -45,6 +57,19 @@ class Cart extends React.Component {
         <div className="subtotal">
           Subtotal: ${this.subTotal()}.00
         </div>
+      </div>
+    )
+  }
+
+  render() {
+    if (!this.props.cart) return null;
+    return(
+      <div>
+        {
+          this.props.cart.length > 0 ? 
+          this.displayItems() : 
+          this.displayNone()
+        }
       </div>
     )
   }
