@@ -51,7 +51,7 @@ class SlideSet extends React.Component {
         <p className="small-description">
           A collection of all-around climbing shoes that excel across a variety of technical styles and disciplines at the highest level.
         </p>
-        <Link className="session-submit button-link" to="/products">Shop Now</Link>
+        <Link id="home-slide" to="/products">Shop Now</Link>
       </div>
       )
     } else if (this.state.currentImageIndex === 1) {
@@ -63,7 +63,7 @@ class SlideSet extends React.Component {
         <p className="small-description">
           These flat-lasted shoes strike the perfect balance between all-day comfort and performance.
         </p>
-        <Link className="session-submit button-link" to="/products">Shop Now</Link>
+        <Link id="home-slide" to="/products">Shop Now</Link>
       </div>
       )
     } else {
@@ -76,7 +76,7 @@ class SlideSet extends React.Component {
           Sometimes getting to and from the route is half the battle. 
           The tough and functional models in our Approach collection will inspire climb-worthy confidence before and after the rope comes out.
         </p>
-        <Link className="session-submit button-link" to="/products">Shop Now</Link>
+        <Link id="home-slide" to="/products">Shop Now</Link>
       </div>
       )
     }

@@ -29,9 +29,9 @@ class Home extends React.Component {
         </div>
       </div>
 
-      {/* <div className="carousel">
+      <div className="carousel">
         <SlideSet />
-      </div> */}
+      </div>
     </div>
   )}
 };
