@@ -12,9 +12,7 @@ class ProductIndexItem extends React.Component {
 
   handleClick(e) {
     e.preventDefefault();
-
   }
-
 
   render () {
     return (

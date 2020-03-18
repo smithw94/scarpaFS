@@ -23,6 +23,7 @@ class SidebarFilter extends React.Component {
         <form className="form-filter">
           <br/>
           <input 
+              className="search-input"
               type="text"
               value={this.props.filterText}
               onChange={this.handleFilterTextChange}
@@ -36,77 +37,87 @@ class SidebarFilter extends React.Component {
           <label className="check-container">              
             <input type="checkbox" value={37} onChange={this.handleFilterAttrChange}/>
             <span className="checkmark"></span>
-            Men's                         
+            <div>
+              Men's
+            </div>                         
           </label>
           <br/>
 
           <label className="check-container">
             <input type="checkbox" value={38} onChange={this.handleFilterAttrChange}/>  
-            <span className="checkmark"></span>           
-            Women's
+            <span className="checkmark"></span>  
+            <div>
+              Women's           
+            </div>         
           </label>
           <br/>
 
           <label className="check-container">
             <input type="checkbox" value={33} onChange={this.handleFilterAttrChange}/>
             <span className="checkmark"></span>
-            Approach
+            <div>
+              Approach
+            </div>
           </label>
           <br/>
 
           <label className="check-container">
             <input type="checkbox" value={34} onChange={this.handleFilterAttrChange}/>
             <span className="checkmark"></span>
+            <div>
             Bouldering
+            </div>
           </label>
           <br/>
 
           <label className="check-container">
             <input type="checkbox" value={35} onChange={this.handleFilterAttrChange}/>
             <span className="checkmark"></span>
+            <div>
             Competition
+            </div>
           </label>
            <br/>
 
           <label className="check-container">
             <input type="checkbox" value={36} onChange={this.handleFilterAttrChange} />
             <span className="checkmark"></span>
-            Trad
+            <div>Trad</div>
           </label>
           <br />
           
           <label className="check-container">
             <input type="checkbox" value={43} onChange={this.handleFilterAttrChange} />
             <span className="checkmark"></span>
-            Leather
+            <div>Leather</div>
           </label>
           <br/>
           
           <label className="check-container">
             <input type="checkbox" value={44} onChange={this.handleFilterAttrChange} />
             <span className="checkmark"></span>
-            Leather/Synthetic
+            <div>Leather/Synthetic</div>
           </label>
           <br/>
 
           <label className="check-container">
             <input type="checkbox" value={45} onChange={this.handleFilterAttrChange} />
             <span class="checkmark"></span>
-            Synthetic
+            <div>Synthetic</div>
           </label>
           <br/>
           
           <label className="check-container">
             <input type="checkbox" value={47} onChange={this.handleFilterAttrChange} />
             <span className="checkmark"></span>
-            XS Edge
+            <div>XS Edge</div>
           </label>
           <br/>
           
           <label className="check-container">
             <input type="checkbox" value={48} onChange={this.handleFilterAttrChange} />
             <span className="checkmark"></span>
-            XS GRIP2
+            <div>XS GRIP2</div>
           </label>
 
         </form>

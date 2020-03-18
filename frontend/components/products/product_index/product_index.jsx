@@ -66,7 +66,6 @@ class ProductIndex extends React.Component {
             filter={this.props.filter}
           />          
         </div>
-        <Link className="home-link" to="/">Home</Link>
       </div>
     )
   }
